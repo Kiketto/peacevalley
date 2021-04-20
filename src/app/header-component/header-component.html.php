@@ -12,16 +12,16 @@
             <img src="src\image\logof.JPG" class="logo"/>
         </div>
         <div class="col-2 option border-bottom-gradient border-red-orange up-red-orange">
-            <p><a href="index.html">Escenas</a></p>
+            <p><a href="index.html.php?pageSelect=escena">Escenas</a></p>
         </div>
         <div class="col-2 option border-bottom-gradient border-orange-yellow up-orange-yellow">
-            <p><a href="pages/musica.html">Música</a></p>
+            <p><a href="index.html.php?pageSelect=musica">Música</a></p>
         </div>
         <div class="col-2 option border-bottom-gradient border-yellow-green up-yellow-green">
-            <p><a href="pages/comunidad.html">Comunidad</a></p>
+            <p><a href="index.html.php?pageSelect=comunidad">Comunidad</a></p>
         </div>
         <div class="col-2 option border-bottom-gradient border-green-blue up-green-blue">
-            <p><a href="pages/contacto.html">Contacto</a></p>
+            <p><a href="index.html.php?pageSelect=contacto">Contacto</a></p>
         </div>
         <div class="col-3 option buscador border-bottom-gradient border-blue-purple up-blue-purple">
             <form action="" method="POST" class="row buscador">

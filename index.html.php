@@ -1,3 +1,18 @@
+<?php
+
+$pageSelect = 'escena';
+if(isset($_GET['pageSelect'])){
+    $pageSelect = $_GET['pageSelect'];
+}
+
+$arrayPages = array(
+    'escena' => './pages/escena/escena.html.php',
+    'comunidad' => './pages/comunidad/comunidad.html.php',
+    'contacto' => './pages/contacto/contacto.html.php',
+    'musica' => './pages/musica/musica.html.php',
+);
+
+?>
 
 <!doctype html>
 <html lang="es">
@@ -20,7 +35,7 @@
 	<div id="page" class="container">
         <?php include_once './src/app/header-component/header-component.html.php' ?>
 
-		<?php include_once 'src\app\page-component\page-component.html.php' ?>
+		<?php include_once $arrayPages[$pageSelect] ?>
 
 		<?php include_once './src/app/footer-component/footer-component.html.php' ?>
 
