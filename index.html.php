@@ -20,7 +20,7 @@
 	<div id="page" class="container">
         <?php include_once './src/app/header-component/header-component.html.php' ?>
 
-		<?php include_once '.src/app/page-component/page-component.html.php' ?>
+		<?php include_once 'src\app\page-component\page-component.html.php' ?>
 
 		<?php include_once './src/app/footer-component/footer-component.html.php' ?>
 
