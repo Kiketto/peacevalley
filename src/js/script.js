@@ -1,22 +1,16 @@
-/////////////////////////////////////////////////////
-// Funcion del buscador no busca ni nada XD
-////////////////////////////////////////////////////
-
-function fbuscador(){
-    //Solo sirve para que el value que es "Buscador" sea = a "" nada
-    var buscador = document.getElementById("bs").value
-    if(buscador == "Buscador"){
-        document.getElementById("bs").value = "";
-    }
-}
-
+import { desplegableMenuOpcionesAbout } from 'src\app\header-component\header-component.js';
+import { borrarValorCuandoPulsasBuscador } from 'src\app\header-component\header-component.js';
 
 //////////////////////////////////////////////////////
 // para iniciar eventos
 /////////////////////////////////////////////////////
 
-function ini(){
-    document.getElementById("bs").addEventListener('click',fbuscador,false);
+
+
+function iniciarEventos(){
+    document.getElementById("bs").addEventListener('click',borrarValorCuandoPulsasBuscador,false);
+    document.getElementsByName("about")[0].addEventListener('focus',desplegableMenuOpcionesAbout,false);
+    console.log('hoa');
 }
 
-window.onload=ini;
+window.onload = iniciarEventos();

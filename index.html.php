@@ -7,8 +7,7 @@ if(isset($_GET['pageSelect'])){
 
 $arrayPages = array(
     'escena' => './pages/escena/escena.html.php',
-    'comunidad' => './pages/comunidad/comunidad.html.php',
-    'contacto' => './pages/contacto/contacto.html.php',
+    'comunidad' => './pages/paisaje/paisaje.html.php',
     'musica' => './pages/musica/musica.html.php',
 );
 
@@ -31,7 +30,7 @@ $arrayPages = array(
     <script src="src\js\script.js"></script>
 </head>
 <body>
-
+    
 	<div id="page" class="container">
         <?php include_once './src/app/header-component/header-component.html.php' ?>
 
