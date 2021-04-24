@@ -8,11 +8,10 @@ export function desplegableMenuOpcionesAbout(){
     for(var i = 0; i < opcionAbout.length; i++){
         //Crear div
         var opcionAbout = document.createElement("div");
-        opcionAbout.setAttribute('top','-100%');
 
         aAbout = document.createElement("a");
-        opcionAbout.setAttribute('href',opcionesUrl[i]);
-        opcionAbout.setAttribute('name',opcionAbout[i]);
+        aAbout.setAttribute('href',opcionesUrl[i]);
+        aAbout.setAttribute('name',opcionAbout[i]);
         var contenidoAbout = document.createTextNode(opcionesAbout[i]);
         
         aAbout.appendChild(contenidoAbout);

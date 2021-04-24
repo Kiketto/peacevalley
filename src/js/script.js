@@ -5,8 +5,6 @@ import { borrarValorCuandoPulsasBuscador } from 'src\app\header-component\header
 // para iniciar eventos
 /////////////////////////////////////////////////////
 
-
-
 function iniciarEventos(){
     document.getElementById("bs").addEventListener('click',borrarValorCuandoPulsasBuscador,false);
     document.getElementsByName("about")[0].addEventListener('focus',desplegableMenuOpcionesAbout,false);
