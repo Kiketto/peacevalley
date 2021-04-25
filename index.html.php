@@ -7,8 +7,11 @@ if(isset($_GET['pageSelect'])){
 
 $arrayPages = array(
     'escena' => './pages/escena/escena.html.php',
-    'comunidad' => './pages/paisaje/paisaje.html.php',
+    'paisaje' => './pages/paisaje/paisaje.html.php',
     'musica' => './pages/musica/musica.html.php',
+    'contact' => 'pages\contact\contact.html.php',
+    'FAQ' => 'pages\faq\faq.html.php',
+    'developter' => 'pages\developter\developter.html.php'
 );
 
 ?>
@@ -27,7 +30,7 @@ $arrayPages = array(
     
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5519d98401.js" crossorigin="anonymous"></script>
-    <script src="src\js\script.js"></script>
+    <script type="module" src="src\js\main.js"></script>
 </head>
 <body>
     
