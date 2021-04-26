@@ -1,19 +1,8 @@
 <div id="content">
-    <p class="titulo background-musica">
-        <svg viewBox="0 0 970 200">
-            <symbol id="s-text">
-                <text text-anchor="middle" x="50%" y="80%">Música</text>
-            </symbol>
-        
-            <g class = "g-ants">
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-            </g>
-        </svg>
-    </p>
+    <h1 class="titulo"> 
+        <img src="src\image\icons8-musical-notes-64.PNG"></img>    
+        Musica
+    </h1>
     <div class="content-music">
         <table class="table-music table-striped">
             <tr class="m">

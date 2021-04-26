@@ -9,6 +9,11 @@
   src: url("AvertaDemoPECuttedDemo-Regular_1.woff2");
 }
 
+@font-face {
+  font-family: "Aldo";
+  src: url("AldotheApache.ttf");
+}
+
 body {
   font-family: "Valentine" !important;
   font-size: 150%;
@@ -17,14 +22,14 @@ body {
 }
 
 #page {
-  margin-top: 2%;
+  margin-top: 2px;
 }
 
 /* Parte superior del menú*/
 .header-top {
   background-color: #1c2833;
   padding-right: 1%;
-  padding-top: 1%;
+  margin-bottom: 1%;
 }
 
 .header-top ul li {
@@ -56,6 +61,7 @@ marquee p {
   margin-bottom: 2%;
   border-bottom: 5px solid;
   border-image-slice: 1;
+  position: relative;
 }
 
 .option p {
@@ -63,7 +69,11 @@ marquee p {
 }
 
 .option input {
-  margin-top: 2%;
+  margin-top: 3%;
+}
+
+.up-green-blue:hover div:first-child {
+  border-bottom: 2px solid white;
 }
 
 .logo {
@@ -104,6 +114,7 @@ marquee p {
     rgb(97, 242, 5),
     rgb(0, 246, 203)
   );
+  z-index: 100;
 }
 
 .up-blue-purple:hover /*Azul a Morado*/ {
@@ -132,13 +143,16 @@ marquee p {
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 .titulo {
-  height: 100%;
-  font-weight: 800;
-  background: black;
-  font-family: Arial;
-  -webkit-box-shadow: 10px 9px 21px 6px rgba(0, 0, 0, 0.58);
-  -moz-box-shadow: 10px 9px 21px 6px rgba(0, 0, 0, 0.58);
-  box-shadow: 10px 9px 21px 6px rgba(0, 0, 0, 0.58);
+  margin-bottom: 2%;
+  color: white;
+  font-size: 300%;
+  font-family: "Aldo" !important;
+  text-indent: 20px;
+}
+
+.titulo img {
+  position: relative;
+  top: -5px;
 }
 
 .background-escenas {

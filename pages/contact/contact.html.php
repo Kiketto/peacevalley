@@ -1,19 +1,8 @@
 <div id="content">
-    <p class="titulo background-contacto">
-        <svg viewBox="0 0 970 200">
-            <symbol id="s-text">
-                <text text-anchor="middle" x="50%" y="80%">Contacto</text>
-            </symbol>
-        
-            <g class = "g-ants">
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-            </g>
-        </svg>
-    </p>
+    <h1 class="titulo"> 
+        <img src="src\image\icons8-contacts-64.PNG"></img>    
+        Contacto
+    </h1>
 <!-- aqui pruebas-->
     <section class="google-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.5110409820845!2d-0.43970958464108834!3d39.18583517952723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd61b03094124c85%3A0x5bedacf9e7f72a04!2sInstitut%20d&#39;Ensenyament%20Secundari%20Sant%20Vicent%20Ferrer!5e0!3m2!1ses!2ses!4v1614012571805!5m2!1ses!2ses" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>

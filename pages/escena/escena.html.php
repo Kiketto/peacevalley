@@ -1,19 +1,8 @@
 <div id="content">
-    <p class="titulo background-escenas">
-        <svg viewBox="0 0 970 200">
-            <symbol id="s-text">
-                <text text-anchor="middle" x="50%" y="80%">Escenas</text>
-            </symbol>
-        
-            <g class = "g-ants">
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-            </g>
-        </svg>
-    </p>
+    <h1 class="titulo"> 
+        <img src="src\image\icons8-picture-in-picture-50.PNG" style="height: 64px; width: 64px"></img>    
+        Escenas
+    </h1>
 
     <div class="content-escenas">
         <div class="row fila-escenas">
