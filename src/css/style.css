@@ -72,10 +72,6 @@ marquee p {
   margin-top: 3%;
 }
 
-.up-green-blue:hover div:first-child {
-  border-bottom: 2px solid white;
-}
-
 .logo {
   position: relative;
   width: 70px;
@@ -84,45 +80,25 @@ marquee p {
 
 /*Al pasar sobre las opciones del menú*/
 
-.up-red-orange:hover /*Rojo a Naranja*/ {
-  background-image: linear-gradient(
-    to right,
-    rgb(251, 005, 005),
-    rgb(251, 118, 7)
-  );
+.up-red:hover {
+  background-color: rgb(231, 76, 60);
 }
 
-.up-orange-yellow:hover /*Naranja a Amarillo*/ {
-  background-image: linear-gradient(
-    to right,
-    rgb(251, 118, 7),
-    rgb(244, 234, 7)
-  );
+.up-orange:hover {
+  background-color: rgb(230, 126, 34);
 }
 
-.up-yellow-green:hover /*Amarillo a Verde*/ {
-  background-image: linear-gradient(
-    to right,
-    rgb(244, 234, 7),
-    rgb(97, 242, 5)
-  );
+.up-green:hover {
+  background-color: rgb(46, 204, 113);
 }
 
-.up-green-blue:hover /*Verde a Azul*/ {
-  background-image: linear-gradient(
-    to right,
-    rgb(97, 242, 5),
-    rgb(0, 246, 203)
-  );
+.up-blue:hover {
+  background-color: rgb(26, 188, 156);
   z-index: 100;
 }
 
-.up-blue-purple:hover /*Azul a Morado*/ {
-  background-image: linear-gradient(
-    to right,
-    rgb(0, 246, 203),
-    rgb(246, 0, 172)
-  );
+.up-blue:hover div:first-child {
+  border-bottom: 2px solid white;
 }
 
 /*Buscador del menu*/
@@ -138,16 +114,15 @@ marquee p {
   line-height: 1300%;
 }
 
-/*Escenas*/
+/* -- Titulo de las paginas -- */
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 .titulo {
-  margin-bottom: 2%;
   color: white;
   font-size: 300%;
   font-family: "Aldo" !important;
-  text-indent: 20px;
+  text-indent: 10px;
 }
 
 .titulo img {
@@ -155,87 +130,67 @@ marquee p {
   top: -5px;
 }
 
-.background-escenas {
+.subtitulo {
+  color: white;
+  text-indent: 30px;
+}
+
+.subtitulo img {
+  position: relative;
+  top: -5px;
+}
+
+/* -- Background del pie de página -- */
+
+.background-escena {
   background-image: linear-gradient(
-    to right,
-    rgb(251, 005, 005),
-    rgb(251, 118, 7)
+    to bottom,
+    rgb(0, 246, 203, 0),
+    rgb(231, 76, 60)
   );
 }
 
 .background-musica {
   background-image: linear-gradient(
-    to right,
-    rgb(251, 118, 7),
-    rgb(244, 234, 7)
+    to bottom,
+    rgb(0, 246, 203, 0),
+    rgb(230, 126, 34)
   );
 }
 
 .background-paisaje {
   background-image: linear-gradient(
-    to right,
-    rgb(244, 234, 7),
-    rgb(97, 242, 5)
+    to bottom,
+    rgb(0, 246, 203, 0),
+    rgb(46, 204, 113)
   );
 }
 
 .background-contacto {
   background-image: linear-gradient(
-    to right,
-    rgb(97, 242, 5),
-    rgb(0, 246, 203)
+    to bottom,
+    rgb(0, 246, 203, 0),
+    rgb(26, 188, 156)
   );
 }
 
-svg {
-  display: block;
-  font: 10em "Montserrat";
-  width: 30%;
-  height: 10%;
-  margin: 0 auto;
+.background-FAQ {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 246, 203, 0),
+    rgb(26, 188, 156)
+  );
 }
 
-.text-copy {
-  fill: none;
-  stroke: #1c2833;
-  stroke-dasharray: 6% 29%;
-  stroke-width: 7px;
-  stroke-dashoffset: 0%;
-  animation: stroke-offset 5.5s infinite linear;
+.background-developter {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 246, 203, 0),
+    rgb(26, 188, 156)
+  );
 }
 
-.text-copy:nth-child(1) {
-  stroke: #1c2833;
-  animation-delay: -1;
-}
-
-.text-copy:nth-child(2) {
-  stroke: #1c2833;
-  animation-delay: -2s;
-}
-
-.text-copy:nth-child(3) {
-  stroke: #1c2833;
-  animation-delay: -3s;
-}
-
-.text-copy:nth-child(4) {
-  stroke: #1c2833;
-  animation-delay: -4s;
-}
-
-.text-copy:nth-child(5) {
-  stroke: #1c2833;
-  animation-delay: -5s;
-}
-
-@keyframes stroke-offset {
-  100% {
-    stroke-dashoffset: -35%;
-  }
-}
-
-/*Contenido las escenas*/
+/* -- Escenas -- */
 
 .content-escenas {
   background-color: #1c2833;
@@ -248,10 +203,8 @@ svg {
 
   margin-bottom: 2%;
 
-  border-width: 5px;
-  border-style: solid;
-  border-image: linear-gradient(to right, rgb(251, 005, 005), rgb(251, 118, 7))
-    1 100%;
+  border-right: 5px rgb(231, 76, 60) solid;
+  border-left: 5px rgb(231, 76, 60) solid;
 }
 
 .escena {
@@ -272,22 +225,63 @@ svg {
 
 .escena img:hover {
   transform: scale(1.1);
-  background: linear-gradient(to top, rgba(251, 005, 005, 0), rgb(251, 118, 7));
+  z-index: 100;
+}
+
+/* -- Paisajes -- */
+
+.content-paisajes {
+  background-color: #1c2833;
+  height: 100%;
+  width: 100%;
+
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+
+  margin-bottom: 2%;
+
+  border-right: 5px rgb(46, 204, 113) solid;
+  border-left: 5px rgb(46, 204, 113) solid;
+}
+
+.paisaje {
+  height: 100%;
+}
+
+.paisaje img {
+  width: 100%;
+  height: 200px;
+  transition: transform 0.2s;
+
+  margin-top: 5%;
+
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+.paisaje img:hover {
+  transform: scale(1.1);
+  z-index: 100;
 }
 
 /*Pie de pagina*/
 
 #footer {
-  border-top: 2px solid #1c2833;
-
   text-align: center;
-  line-height: 1px;
-  padding-top: 1%;
+  line-height: 5px;
+  padding-top: 5%;
   padding-bottom: 1%;
 
   color: #ffffff;
   text-shadow: #474747 3px 5px 2px;
   color: #ffffff;
+}
+
+.footer-contact-social {
+  position: relative;
+  top: -15px;
 }
 
 /*Enlaces*/
@@ -306,6 +300,8 @@ a:visited:hover {
   text-decoration: none;
   font-weight: bold;
 }
+
+/* Formulario de Contacto , Login y Register*/
 
 .title {
   text-transform: uppercase;
@@ -454,7 +450,6 @@ label {
 .ask-question-input {
   background-color: #ffffff;
   padding: 15px;
-  margin-top: 2%;
   box-shadow: 0px 0px 13px -3px;
   width: 100%;
 }
@@ -473,7 +468,6 @@ label {
 .form-description {
   margin-right: 108px;
   color: #1c2833;
-  font-family: fontawesome;
   font-weight: bold;
 }
 
@@ -495,12 +489,7 @@ label {
 .form-description2 {
   margin-right: 130px;
   color: #1c2833;
-  font-family: fontawesome;
   font-weight: bold;
-}
-
-.question-title3 {
-  margin-top: 30px;
 }
 
 .question-title {
@@ -517,7 +506,6 @@ label {
 .form-description3 {
   margin-right: 90px;
   color: #1c2833;
-  font-family: fontawesome;
   font-weight: bold;
 }
 
@@ -526,10 +514,8 @@ label {
 }
 
 .question-details {
-  margin-top: 0px;
-  margin-bottom: 0px;
   height: 200px;
-  width: 75%;
+  width: 100%;
   border: 1px solid #1c2833;
   background-color: #f3f3f3;
   outline: none;
@@ -538,7 +524,6 @@ label {
 .form-description4 {
   margin-right: 131px;
   color: #1c2833;
-  font-family: fontawesome;
   font-weight: bold;
   float: left;
 }
@@ -568,13 +553,41 @@ label {
   font-weight: bold;
 }
 
-.main-content {
-  margin: 2%;
-  margin-left: 20%;
+.formulario-contacto {
+  width: 100%;
+  margin-bottom: 2%;
 }
 
 .google-map {
+  margin-bottom: 2%;
+}
+
+/* -- FAQ -- */
+
+.faq-preguntas {
+  border: 2px white solid;
+  border-radius: 20px;
+}
+
+.faq-pregunta {
+  margin: 1%;
+  color: white;
+}
+
+/* -- Desarrollador -- */
+
+.desarrollador {
+  color: white;
+  text-align: justify;
+}
+
+.desarrollador img {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  border: 5px solid rgb(26, 188, 156);
   margin-top: 2%;
+  margin-left: 5%;
 }
 
 /*------------------------*/
@@ -589,11 +602,8 @@ label {
 
   margin-bottom: 2%;
 
-  border-left: 5px;
-  border-right: 5px;
-  border-style: solid;
-  border-image: linear-gradient(to right, rgb(251, 118, 7), rgb(244, 234, 7)) 1
-    100%;
+  border-left: 5px rgb(230, 126, 34) solid;
+  border-right: 5px rgb(230, 126, 34) solid;
 }
 
 .table-music {

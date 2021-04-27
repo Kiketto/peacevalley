@@ -1,60 +1,39 @@
 
 <div id="content">
-    <p class="titulo background-contacto">
-        <svg viewBox="0 0 970 200">
-            <symbol id="s-text">
-                <text text-anchor="middle" x="50%" y="80%">Contacto</text>
-            </symbol>
-        
-            <g class = "g-ants">
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-            </g>
-        </svg>
-    </p>
-<!-- aqui pruebas-->
-    <section class="google-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.5110409820845!2d-0.43970958464108834!3d39.18583517952723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd61b03094124c85%3A0x5bedacf9e7f72a04!2sInstitut%20d&#39;Ensenyament%20Secundari%20Sant%20Vicent%20Ferrer!5e0!3m2!1ses!2ses!4v1614012571805!5m2!1ses!2ses" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </section>
-    
-    <section class="main-content">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="ask-question-input">
-                    <h4>Contacta con nosotros</h4>
-                    <hr>
-                    <form>
-                        <div>
-                            <span class="form-description">Nombre de usuario* </span>
-                            <input type="text" name="fname" class="username" placeholder="Introduzca su nombre">  
-                        </div>
-                        <div class="email-part">
-                            <span class="form-description2">E-Mail* </span>
-                            <input type="text" name="fname" class="email" placeholder="Introduzca su Email">  
-                        </div>
-                        <div class="question-title3">
-                            <span class="form-description3">Título de la pregunta* </span>
-                            <input type="text" name="fname" class="question-title" placeholder="Escriba el título de su pregunta">
-                        </div>
-                        <div class="question-title3">
-                            <span class="form-description4">Detalles* </span>
-                            <textarea class="question-details" placeholder="Escriba la descripción detallada."></textarea>
-                        </div>                     
-                    </form>
-                    <div class="publish-button">
-                        <button type="button" class="publis">Publica tu pregunta</button>
-                    </div>
-            
+    <h1 class="titulo"> 
+        <img src="src\image\icons8-question-mark-64.PNG"></img>    
+        Preguntas frecuentes
+    </h1>
+
+    <section class="FAQ">
+        <h6 style="color: white">Si tiene alguna pregunta que no se encuentra aqui, utiliza el formulario de <a href="index.html.php?pageSelect=contacto">contacto</a></h6>
+        <div class="row faq-preguntas">
+            <h3 style="color:white; margin-top:2%; margin-bottom:2%">Preguntas frecuentes sobre cuenta</h3>
+            <div class="row">
+                <div class="col faq-pregunta">
+                    <h4 class="pregunta">¿Necesito una cuenta para poder guardar en mi lista mis escenas favoritas?</h4>
+                    <p class="respuesta">Si, necesitas registrarte en nuestra página para poder guardar en la lista tus escenas favoritas</p>
                 </div>
-        
             </div>
-
+            <div class="row">
+                <div class="col faq-pregunta">
+                    <h4 class="pregunta">¿Si olvido mi el usuario o la contraseña de mi cuenta como puedo recuperarlas?</h4>
+                    <p class="respuesta">Por el momento la funcionalidad de poder recuperar tanto tu nombre de usuario o tu contraseña aun no estan implementadas</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col faq-pregunta">
+                    <h4 class="pregunta">¿Como podria cambiar el nombre de usuario o la contraseña?</h4>
+                    <p class="respuesta">Todavia estamos trabajando en esa funcionalidad, lo qe te recomendamos es que tengas cuidado a la hora de elegir el nombre de usuario y la contraseña</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col faq-pregunta">
+                    <h4 class="pregunta">pregunta?</h4>
+                    <p class="respuesta">respuesta</p>
+                </div>
+            </div>
         </div>
-
     </section>
 
-    <!--aqui acaban las pruebas-->
 </div> <!-- content -->

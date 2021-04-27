@@ -13,21 +13,21 @@
         <div class="col-1 option" name="logo">
             <img src="src\image\logof.JPG" class="logo"/>
         </div>
-        <div class="col-2 option up-red-orange" name="escena">
+        <div class="col-2 option up-red" name="escena">
             <p><a href="index.html.php?pageSelect=escena">Escenas</a></p>
         </div>
-        <div class="col-2 option up-orange-yellow" name="musica">
+        <div class="col-2 option up-orange" name="musica">
             <p><a href="index.html.php?pageSelect=musica">Música</a></p>
         </div>
-        <div class="col-2 option up-yellow-green" name="paisaje">
+        <div class="col-2 option up-green" name="paisaje">
             <p><a href="index.html.php?pageSelect=paisaje">Paisajes</a></p>
         </div>
-        <div class="col-2 option up-green-blue" name="about">
+        <div class="col-2 option up-blue" name="about">
             <div class="option-about">
                 <p><a href="#">Sobre</a></p>
             </div>
             <div class="row optionAbout" name="contact" style="display: none">
-                <p><a href="index.html.php?pageSelect=contact">Contacto</a></p>
+                <p><a href="index.html.php?pageSelect=contacto">Contacto</a></p>
             </div>
             <div class="row optionAbout" name="FAQ" style="display: none">
                 <p><a href="index.html.php?pageSelect=FAQ">FAQ</a></p>
