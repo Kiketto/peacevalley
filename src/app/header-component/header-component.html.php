@@ -5,7 +5,7 @@
         <div class="col-1"></div>
         <div class="col"></div>
         <div class="col-1" style="text-align: right" hidden><a href="#">Lista</a></div>
-        <div class="col-2" style="text-align: center"><a href="pages/login.html">Iniciar sesión</a></div>
+        <div class="col-2" style="text-align: center"><a href="src\app\login-component\login-component.html.php">Iniciar sesión</a></div>
         
     </div>
     <div id="header-bottom" class="row menu border-bottom-gradient">

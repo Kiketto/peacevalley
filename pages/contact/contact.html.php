@@ -22,29 +22,29 @@
                 <div class="ask-question-input">
                     <h4>Contacta con nosotros</h4>
                     <hr>
-                    <form>
+                    <form action="pages\contact\contactform.php" method="post">
                         <div class="row">
                             <div class="col">
                                 <span class="form-description">Nombre de usuario* </span>
-                                <input type="text" name="fname" class="username" placeholder="Introduzca su nombre">  
+                                <input type="text" name="name" class="username" placeholder="Introduzca su nombre">  
                             </div>
                             <div class="email-part col">
                                 <span class="form-description2">E-Mail* </span>
-                                <input type="text" name="fname" class="email" placeholder="Introduzca su Email">  
+                                <input type="text" name="email" class="email" placeholder="Introduzca su Email">  
                             </div>
                         </div>
                         <div class="question-title3">
                             <span class="form-description3">Título de la pregunta* </span>
-                            <input type="text" name="fname" class="question-title" placeholder="Escriba el título de su pregunta">
+                            <input type="text" name="questiontitle" class="question-title" placeholder="Escriba el título de su pregunta">
                         </div>
                         <div class="question-title3">
                             <span class="form-description4">Detalles* </span>
-                            <textarea class="question-details" placeholder="Escriba la descripción detallada."></textarea>
+                            <textarea class="question-details" name="questiondetails" placeholder="Escriba la descripción detallada."></textarea>
+                        </div>
+                        <div class="publish-button">
+                            <button type="submit" name="submit" class="publis">Enviar</button>
                         </div>                     
-                    </form>
-                    <div class="publish-button">
-                        <button type="button" class="publis">Enviar</button>
-                    </div>
+                    </form>  
                 </div>
             </div>
         </div>

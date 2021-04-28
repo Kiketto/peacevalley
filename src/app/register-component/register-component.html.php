@@ -2,12 +2,12 @@
 <html >
 <head>
     <meta charset="UTF-8">
-    <title>Register Area</title>
+    <title>Registrarse</title>
     <meta name="description" content="HTML5, CSS3">
     <meta name="author" content="Enrique Monterde">
 
-    <link rel="shortcut icon" href="../imgs/logof.JPG">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="..\..\image\logo.JPG">
+    <link rel="stylesheet" href="register-component.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
 </head>
@@ -26,11 +26,11 @@
                     <input type="password" placeholder="confirmed password"/>
                     <div class="text-center">
                         <div class="button">REGISTER IN</div>
-                        <a href="login.html"><div class="button">i have an account</div></a>
+                        <a href="..\login-component\login-component.html.php"><div class="button">Tengo una cuenta</div></a>
                     </div>
                 </form>
                 <br>
-                <a href="../index.html"><div class="button">Volver</div></a>
+                <a href="..\..\..\index.html.php"><div class="button">Volver</div></a>
             </div>
         </div>
     </div>
