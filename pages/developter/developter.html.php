@@ -1,6 +1,6 @@
 <div id="content">
     <h1 class="titulo"> 
-        <img src="./src/image/icons8-employee-64.PNG"></img>    
+        <img src="./src/image/icons8-employee-64.png"></img>    
         Desarrollador
     </h1>
     <h3 class="subtitulo"> 

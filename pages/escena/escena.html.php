@@ -1,6 +1,6 @@
 <div id="content">
     <h1 class="titulo"> 
-        <img src="./src/image/icons8-picture-in-picture-50.PNG" style="height: 64px; width: 64px"></img>    
+        <img src="./src/image/icons8-picture-in-picture-50.png" style="height: 64px; width: 64px"></img>    
         Escenas
     </h1>
 

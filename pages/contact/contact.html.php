@@ -1,11 +1,11 @@
 <div id="content">
     <h1 class="titulo"> 
-        <img src="./src/image/icons8-contacts-64.PNG"></img>    
+        <img src="./src/image/icons8-contacts-64.png"></img>    
         Contacto
     </h1>
     
     <h3 class="subtitulo"> 
-        <img src="./src/image/icons8-google-maps-old-32.PNG"></img>    
+        <img src="./src/image/icons8-google-maps-old-32.png"></img>    
         Localización
     </h3>
     <section class="google-map">
