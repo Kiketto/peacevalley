@@ -9,9 +9,9 @@ $arrayPages = array(
     'escena' => './pages/escena/escena.html.php',
     'paisaje' => './pages/paisaje/paisaje.html.php',
     'musica' => './pages/musica/musica.html.php',
-    'contacto' => 'pages\contact\contact.html.php',
-    'FAQ' => 'pages\faq\faq.html.php',
-    'developter' => 'pages\developter\developter.html.php'
+    'contacto' => './pages/contact/contact.html.php',
+    'FAQ' => './pages/faq/faq.html.php',
+    'developter' => './pages/developter/developter.html.php'
 );
 
 ?>
