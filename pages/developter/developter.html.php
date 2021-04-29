@@ -1,16 +1,16 @@
 <div id="content">
     <h1 class="titulo"> 
-        <img src="src\image\icons8-employee-64.PNG"></img>    
+        <img src="./src/image/icons8-employee-64.PNG"></img>    
         Desarrollador
     </h1>
     <h3 class="subtitulo"> 
-        <img src="src\image\icons8-cartoon-boy-32.png"></img>    
+        <img src="./src/image/icons8-cartoon-boy-32.png"></img>    
         Enrique Monterde Morales
     </h3>
     <section class="desarrollador">
         <div class="row" style="margin-bottom:2%">
             <div class=col-4>    
-                <img src="src\image\perfil.jpg"/>
+                <img src="./src/image/perfil.jpg"/>
             </div>
             <div class="col-8">
             <h5>Dispuesto a cumplir mis sueños y los tuyos</h5>

@@ -1,6 +1,6 @@
 <div id="content">
     <h1 class="titulo"> 
-        <img src="src\image\icons8-musical-notes-64.PNG"></img>    
+        <img src="./src/image/icons8-musical-notes-64.PNG"></img>    
         Musica
     </h1>
     <div class="content-music">

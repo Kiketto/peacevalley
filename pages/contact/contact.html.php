@@ -1,11 +1,11 @@
 <div id="content">
     <h1 class="titulo"> 
-        <img src="src\image\icons8-contacts-64.PNG"></img>    
+        <img src="./src/image/icons8-contacts-64.PNG"></img>    
         Contacto
     </h1>
     
     <h3 class="subtitulo"> 
-        <img src="src\image\icons8-google-maps-old-32.PNG"></img>    
+        <img src="./src/image/icons8-google-maps-old-32.PNG"></img>    
         Localización
     </h3>
     <section class="google-map">
@@ -13,7 +13,7 @@
     </section>
 
     <h3 class="subtitulo"> 
-        <img src="src\image\icons8-google-forms-32.png"></img>    
+        <img src="./src/image/icons8-google-forms-32.png"></img>    
         Formulario de contacto
     </h3>
     <section class="formulario-contacto">
@@ -22,7 +22,7 @@
                 <div class="ask-question-input">
                     <h4>Contacta con nosotros</h4>
                     <hr>
-                    <form action="pages\contact\contactform.php" method="post">
+                    <form action="./pages/contact/contactform.php" method="post">
                         <div class="row">
                             <div class="col">
                                 <span class="form-description">Nombre de usuario* </span>

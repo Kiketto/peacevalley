@@ -1,7 +1,7 @@
 
 <div id="content">
     <h1 class="titulo"> 
-        <img src="src\image\icons8-question-mark-64.PNG"></img>    
+        <img src="./src/image/icons8-question-mark-64.PNG"></img>    
         Preguntas frecuentes
     </h1>
 

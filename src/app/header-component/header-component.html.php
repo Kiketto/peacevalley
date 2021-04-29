@@ -5,13 +5,13 @@
         <div class="col-1"></div>
         <div class="col"></div>
         <div class="col-1" style="text-align: right" hidden><a href="#">Lista</a></div>
-        <div class="col-2" style="text-align: center"><a href="src\app\login-component\login-component.html.php">Iniciar sesión</a></div>
+        <div class="col-2" style="text-align: center"><a href="./src/app/login-component/login-component.html.php">Iniciar sesión</a></div>
         
     </div>
     <div id="header-bottom" class="row menu border-bottom-gradient">
         
         <div class="col-1 option" name="logo">
-            <img src="src\image\logof.JPG" class="logo"/>
+            <img src="./src/image/logof.JPG" class="logo"/>
         </div>
         <div class="col-2 option up-red" name="escena">
             <p><a href="index.html.php?pageSelect=escena">Escenas</a></p>
