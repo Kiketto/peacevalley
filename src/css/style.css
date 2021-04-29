@@ -315,6 +315,17 @@ input[type="text"] {
   outline: none;
 }
 
+label {
+  margin-bottom: 20px;
+  display: block;
+  font-size: 18px;
+  color: #666;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
 .ask-question-input {
   background-color: #ffffff;
   padding: 15px;
