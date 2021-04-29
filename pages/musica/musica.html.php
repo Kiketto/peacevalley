@@ -4,107 +4,29 @@
         Musica
     </h1>
     <div class="content-music">
-        <table class="table-music table-striped">
-            <tr class="m">
-                <td>
-                    <h3>Autor</h3>
-                </td>
-                <td>
-                    <h3>Título</h3>
-                </td>
-            </tr>
-            <tr>
-                <td>Alexey Anisimov</td>
-                <td> Lo-fi_Hip-hop.</td>
-                <td>
-                    <audio src="../music/Alexey_Anisimov_-_Hip-Hop_Lo-Fi.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Alexey Anisimov</td>
-                <td> Lo-fi_Chill-hop.</td>
-                <td>
-                    <audio src="../music/Alexey_Anisimov_-_Lo-Fi_Chill_Hop.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Alexey Anisimov</td>
-                <td> Lo-fi_Hip-RnB.</td>
-                <td>
-                    <audio src="../music/Alexey_Anisimov_-_Lo-Fi_Chill_RnB.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Alpha Red</td>
-                <td>DoingYoThangInst</td>
-                <td>
-                    <audio src="../music/Alpha_Red_-_Doing_Yo_Thang__Inst._.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Antonio Marrero</td>
-                <td>Interdimensional</td>
-                <td>
-                    <audio src="../music/Antonio_Marrero_-_Interdimensional.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Cleric</td>
-                <td>Lo-fi_Dreamy</td>
-                <td>
-                    <audio src="../music/Cleric_-_Lo-Fi_Dreamy.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Ed Napoli</td>
-                <td>Mirage</td>
-                <td>
-                    <audio src="../music/Ed_Napoli_-_Mirage.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Ed Napoli</td>
-                <td>Sunset</td>
-                <td>
-                    <audio src="../music/Ed_Napoli_-_Sunset.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Feeblom</td>
-                <td> Piano Selected</td>
-                <td>
-                    <audio src="../music/Feeblom_-_Piano_Selected.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-            <tr>
-                <td>GrayMic</td>
-                <td>A Walk in the park</td>
-                <td>
-                    <audio src="../music/GrayMic_-_A_Walk_in_the_Park.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Grumpynora</td>
-                <td> Lo fied Chicken</td>
-                <td>
-                    <audio src="../music/Grumpynora_-_Lo_fied_Chicken.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Joystock</td>
-                <td> Coffee Break</td>
-                <td>
-                    <audio src="../music/Joystock_-_Coffee_Break.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Joystock</td>
-                <td> Lofi Chillout Hip Hop Beat</td>
-                <td>
-                    <audio src="../music/Joystock_-_Lofi_Chillout_Hip_Hop_Beat.mp3" id="audio" controls></audio>
-                </td>
-            </tr>
-        </table>
-    </div>  
+        <div class="row fila-paisajes">
+            <div class="col paisaje">
+                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1039419004%3Fsecret_token%3Ds-b4jydvCaxIh&color=%23e67e22&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                    <a href="https://soundcloud.com/peace-valley-548309094" title="Peace Valley" target="_blank" style="color: #cccccc; text-decoration: none;">Peace Valley</a> 
+                    · 
+                    <a href="https://soundcloud.com/peace-valley-548309094/lo-fied-chicken/s-b4jydvCaxIh" title="Lo fied Chicken" target="_blank" style="color: #cccccc; text-decoration: none;">Lo fied Chicken</a>
+                </div>
+            </div>
+            <div class="col paisaje">
+                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1039418983%3Fsecret_token%3Ds-Zn4N7vYGK89&color=%23e67e22&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/peace-valley-548309094" title="Peace Valley" target="_blank" style="color: #cccccc; text-decoration: none;">Peace Valley</a> 
+                · 
+                <a href="https://soundcloud.com/peace-valley-548309094/magnolia/s-Zn4N7vYGK89" title="Magnolia" target="_blank" style="color: #cccccc; text-decoration: none;">Magnolia</a></div>
+            </div>
+            <div class="col paisaje">
+                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1039418971%3Fsecret_token%3Ds-Dm62ma1aYko&color=%23e67e22&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/peace-valley-548309094" title="Peace Valley" target="_blank" style="color: #cccccc; text-decoration: none;">Peace Valley</a> 
+                · 
+                <a href="https://soundcloud.com/peace-valley-548309094/relaxing-lofi-hip-hop-beat/s-Dm62ma1aYko" title="Relaxing Lofi Hip Hop Beat" target="_blank" style="color: #cccccc; text-decoration: none;">Relaxing Lofi Hip Hop Beat</a></div>
+            </div>
 
+    </div>
 </div> <!-- content -->
