@@ -8,7 +8,7 @@ if(isset($_GET['pageSelect'])){
 $arrayPages = array(
     'escena' => './pages/escena/escena.html.php',
     'paisaje' => './pages/paisaje/paisaje.php',
-    'musica' => './pages/musica/musica.html.php',
+    'musica' => './pages/musica/musica.php',
     'contacto' => './pages/contact/contact.html.php',
     'FAQ' => './pages/faq/faq.html.php',
     'developter' => './pages/developter/developter.html.php'

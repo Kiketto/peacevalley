@@ -266,6 +266,26 @@ marquee p {
   z-index: 100;
 }
 
+/* Musica */
+
+.content-music {
+  background-color: #1c2833;
+  height: 100%;
+  width: 100%;
+  color: white;
+
+  padding: 2%;
+
+  margin-bottom: 2%;
+
+  border-left: 5px rgb(230, 126, 34) solid;
+  border-right: 5px rgb(230, 126, 34) solid;
+}
+
+.fila-music {
+  margin-bottom: 50%;
+}
+
 /*Pie de pagina*/
 
 #footer {
@@ -470,41 +490,6 @@ label {
 }
 
 /*------------------------*/
-
-.content-music {
-  background-color: #1c2833;
-  height: 100%;
-  width: 100%;
-  color: white;
-
-  padding: 2%;
-
-  margin-bottom: 2%;
-
-  border-left: 5px rgb(230, 126, 34) solid;
-  border-right: 5px rgb(230, 126, 34) solid;
-}
-
-.table-music {
-  background-color: #1c2833;
-  height: 100%;
-  width: 100%;
-  color: white;
-  padding: 2%;
-  margin-bottom: 2%;
-  text-align: center;
-}
-
-.m {
-  background-color: #1c2833;
-  height: 100%;
-  width: 100%;
-  color: white;
-  border-bottom: 5px;
-  border-style: solid;
-  border-image: linear-gradient(to right, rgb(251, 005, 005), rgb(251, 118, 7))
-    1 100%;
-}
 
 .content-comunidad {
   background-color: #1c2833;
