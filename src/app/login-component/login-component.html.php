@@ -1,5 +1,48 @@
 <?php
-$error;
+
+session_start();
+require_once '..\..\..\includes\db.inc.php';
+$error = '';
+$success = '';
+
+if(isset($_POST['submit'])){
+	if(isset($_POST['mail'],$_POST['password']) && !empty($_POST['mail']) && !empty($_POST['password'])){
+		
+        $email = trim($_POST['mail']);
+		$password = trim($_POST['password']);
+ 
+		if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+			
+            $sql = "SELECT * FROM usuario WHERE email = :mail ";
+			$handle = $pdo->prepare($sql);
+			$params = ['mail'=>$email];
+			$handle->execute($params);
+
+			if($handle->rowCount() > 0){
+				
+                $getRow = $handle->fetch(PDO::FETCH_ASSOC);
+
+		
+					
+                    unset($getRow['password']);
+					$_SESSION = $getRow;
+					header('location:..\..\..\index.html.php');
+					exit();
+
+			} else {
+				$error .= "- Correo o contraseña equivocada -";
+			}
+			
+		} else {
+			$error .= "- Email invalido -";	
+		}
+ 
+	} else {
+		$error .= "- Requiere email y contraseña -";	
+	}
+ 
+}
+
 ?>
 
 <!doctype html>
@@ -25,14 +68,16 @@ $error;
         <div class="modal-bodies">
             <div class="modal-body modal-body-step-1 is-showing">
                 <div class="title">Inicia sesión</div>
-                <?php if(!empty($error)){ ?>
-                <div class="description"><?= $error ?></div>
-                <?php } ?>
-                <form action="..\..\..\includes\login.inc.php" method="post">
-                    <input type="text" placeholder="Name or Email"/>
-                    <input type="password" placeholder="Password"/>
+                <?php 
+				if(!empty($error)){
+				    echo '<div class="alert alert-danger">'.$error.'</div>';
+				}
+			    ?>
+                <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+                    <input type="text" name="mail" placeholder="Email"/>
+                    <input type="password" name="password" placeholder="Password"/>
                     <div class="text-center w-100">
-                        <button type="submit" class="button w-100">LOG IN</button>
+                        <button type="submit" name="submit" class="button w-100">LOG IN</button>
                     </div>
                 </form>
                 <div class="text-center">
