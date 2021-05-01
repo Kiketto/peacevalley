@@ -18,19 +18,21 @@
         <div class="modal-bodies">
             <div class="modal-body modal-body-step-1 is-showing">
                 <div class="title">Registrate</div>
-                <div class="description">Hola, Registrate</div>
-                <form>
-                    <input type="text" placeholder="Name"/>
-                    <input type="email" placeholder="Email"/>
-                    <input type="password" placeholder="password"/>
-                    <input type="password" placeholder="confirmed password"/>
-                    <div class="text-center">
-                        <div class="button">REGISTER IN</div>
-                        <a href="..\login-component\login-component.html.php"><div class="button">Tengo una cuenta</div></a>
+                <?php if(!empty($error)){ ?>
+                <div class="description"><?= $error ?></div>
+                <?php } ?>
+                <form action="..\..\..\includes\register.inc.php" method="post">
+                    <input type="text" name="username" placeholder="Username"/>
+                    <input type="email" name="mail" placeholder="Email"/>
+                    <input type="password" name="password" placeholder="Password"/>
+                    <input type="password" name="confirmpassword" placeholder="confirmed password"/>
+                    <div class="text-center w-100">
+                        <button class="button w-100" type="submit" name="submit">REGISTER IN</button>
                     </div>
                 </form>
                 <br>
                 <a href="..\..\..\index.html.php"><div class="button">Volver</div></a>
+                <a href="..\login-component\login-component.html.php"><div class="button">Tengo una cuenta</div></a>
             </div>
         </div>
     </div>

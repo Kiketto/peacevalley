@@ -1,3 +1,6 @@
+<?php
+$error;
+?>
 
 <!doctype html>
 <html lang="es">
@@ -22,17 +25,20 @@
         <div class="modal-bodies">
             <div class="modal-body modal-body-step-1 is-showing">
                 <div class="title">Inicia sesión</div>
-                <div class="description">Hola, Inicia sesión</div>
-                <form>
-                    <input type="text" placeholder="Name"/>
-                    <input type="email" placeholder="Email"/>
-                    <div class="text-center">
-                        <div class="button">LOG IN</div>
-                        <a href="..\register-component\register-component.html.php"><div class="button">Crear una cuenta</div></a>
+                <?php if(!empty($error)){ ?>
+                <div class="description"><?= $error ?></div>
+                <?php } ?>
+                <form action="..\..\..\includes\login.inc.php" method="post">
+                    <input type="text" placeholder="Name or Email"/>
+                    <input type="password" placeholder="Password"/>
+                    <div class="text-center w-100">
+                        <button type="submit" class="button w-100">LOG IN</button>
                     </div>
                 </form>
+                <div class="text-center">
                 <br> 
                 <a href="..\..\..\index.html.php"><div class="button">Volver</div></a>
+                <a href="..\register-component\register-component.html.php"><div class="button">Crear una cuenta</div></a>
             </div>
         </div>
     </div>
