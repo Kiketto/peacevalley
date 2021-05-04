@@ -5,13 +5,16 @@
         <div class="col-1"></div>
         <div class="col"></div>
         <div class="col-1" style="text-align: right" hidden><a href="#">Lista</a></div>
-        <div class="col-1"><?php if(!$_SESSION['id']){echo ucfirst($_SESSION['nombre']);} ?></div>
-        <?php if(!$_SESSION['id']){ ?>
-        <div class="col-2" style="text-align: center"><a href="./includes/logout.inc.php">Desconectar</a></div>
-        <?php } else {?>
-        <div class="col-2" style="text-align: center"><a href="./src/app/login-component/login-component.html.php">Iniciar sesión</a></div>
+      
+        <div class="col-1">
+        <?php if(isset($_SESSION['id'])){ echo '<div class="col-2" style="text-align: center">'.ucfirst($_SESSION['nombre']).'</div>';} ?></div>
+            <?php if(isset($_SESSION['id'])){ ?>
+                <div class="col-2" style="text-align: center"><a href="./includes/logout.inc.php">Desconectar</a></div>
+            <?php } else {?>
+                <div class="col-2" style="text-align: center"><a href="./src/app/login-component/login-component.html.php">Iniciar sesión</a></div>
         <?php } ?>
-    </div>
+        </div>
+        
     <div id="header-bottom" class="row menu border-bottom-gradient">
         
         <div class="col-1 option" name="logo">

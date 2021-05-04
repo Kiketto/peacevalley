@@ -21,14 +21,16 @@ if(isset($_POST['submit'])){
 			if($handle->rowCount() > 0){
 				
                 $getRow = $handle->fetch(PDO::FETCH_ASSOC);
+                echo '<p>'.$getRow['contrasenya'].'</p>';
 
-		
-					
-                    unset($getRow['password']);
+		        if(password_verify($password, $getRow['contrasenya'])){
+					unset($getRow['contrasenya']);
 					$_SESSION = $getRow;
-					header('location:..\..\..\index.html.php');
+					header('location: ..\..\..\index.html.php');
 					exit();
-
+				} else {
+					$error .= "- orreo o contraseña equivocada -";
+				}
 			} else {
 				$error .= "- Correo o contraseña equivocada -";
 			}
