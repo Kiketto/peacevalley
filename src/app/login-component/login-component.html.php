@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
 
 		        if(password_verify($password, $getRow['contrasenya'])){
 					unset($getRow['contrasenya']);
-					$_SESSION = $getRow;
+					$_SESSION['usu'] = $getRow['email'];
 					header('location: ..\..\..\index.html.php');
 					exit();
 				} else {

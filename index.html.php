@@ -1,7 +1,4 @@
 <?php
-
-session_start();
-
 $pageSelect = 'escena';
 if(isset($_GET['pageSelect'])){
     $pageSelect = $_GET['pageSelect'];

@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <div id="header">
     <div class="letrero" name="letrero">
         <marquee id="marco"><p>Registrate en el Peace Valley para poder crear escenas o guardarlas en favoritos!</p></marquee></div>
@@ -6,14 +8,12 @@
         <div class="col"></div>
         <div class="col-1" style="text-align: right" hidden><a href="#">Lista</a></div>
       
-        <div class="col-1">
-        <?php if(isset($_SESSION['id'])){ echo '<div class="col-2" style="text-align: center">'.ucfirst($_SESSION['nombre']).'</div>';} ?></div>
-            <?php if(isset($_SESSION['id'])){ ?>
-                <div class="col-2" style="text-align: center"><a href="./includes/logout.inc.php">Desconectar</a></div>
-            <?php } else {?>
-                <div class="col-2" style="text-align: center"><a href="./src/app/login-component/login-component.html.php">Iniciar sesión</a></div>
+        <?php if(isset($_SESSION['usu'])){ echo '<div class="col-2" style="text-align: center"><p>'.$_SESSION['usu'].'</p></div>';} ?>
+        <?php if(isset($_SESSION['usu'])){ ?>
+            <div class="col-2" style="text-align: center"><a href=".\includes\logout.inc.php">Desconectar</a></div>
+        <?php } else {?>
+            <div class="col-2" style="text-align: center"><a href=".\src\app\login-component\login-component.html.php">Iniciar sesión</a></div>
         <?php } ?>
-        </div>
         
     <div id="header-bottom" class="row menu border-bottom-gradient">
         
