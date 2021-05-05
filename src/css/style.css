@@ -79,6 +79,23 @@ marquee p {
   top: -20px;
 }
 
+/* Boton favoritos */
+
+.button {
+  padding: 10px 20px;
+  border-radius: 3px;
+  background: #1c2833;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button:hover {
+  font-weight: bold;
+}
+
 /*Al pasar sobre las opciones del menú*/
 
 .up-red:hover {

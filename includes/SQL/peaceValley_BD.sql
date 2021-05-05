@@ -35,3 +35,23 @@ id_paisajeEscena INT NOT NULL,
   CONSTRAINT FK_idPaisajeEscena FOREIGN KEY (id_paisajeEscena)
       REFERENCES paisaje (id_paisaje)
 );
+
+CREATE TABLE favmusica (
+	id_favMusica INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuarioFavMusica INT NOT NULL,
+    id_musicaFavMusica INT NOT NULL,
+    CONSTRAINT FK_idMusicaFavMusica FOREIGN KEY (id_musicaFavMusica)
+      REFERENCES cancion (id_cancion),
+  CONSTRAINT FK_idUsuarioFavMusica FOREIGN KEY (id_usuarioFavMusica)
+      REFERENCES usuario (id_usuario)
+);
+
+CREATE TABLE favpaisaje (
+	id_favPaisaje INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuarioFavPaisaje INT NOT NULL,
+    id_paisajeFavPaisaje INT NOT NULL,
+    CONSTRAINT FK_idPaisajeFavPaisaje FOREIGN KEY (id_paisajeFavPaisaje)
+      REFERENCES paisaje (id_paisaje),
+  CONSTRAINT FK_idUsuarioFavPaisaje FOREIGN KEY (id_usuarioFavPaisaje)
+      REFERENCES usuario (id_usuario)
+);

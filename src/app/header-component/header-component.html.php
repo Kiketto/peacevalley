@@ -9,15 +9,25 @@
         <div class="col"></div>
         <div class="col-1" style="text-align: right" hidden><a href="#">Lista</a></div>
         <div class="col-3" name="usuario" style="text-align: right;">
+            
             <div class="option-usuario">
             <?php if(isset($_SESSION['usu'])){ ?>    
                 <p><a href="#"><?= $_SESSION['usu'] ?> </a>
-                <img style="height: 15px; width: 15px;" name="listfav" onclick="desplegableMenuOpcionesUsuario()" src="./src/image/icons8-expand-arrow-32.png" /></p>
+                <img style="height: 15px; width: 15px;" name="listfav" src="./src/image/icons8-expand-arrow-32.png" /></p>
             <?php ;} ?>
             </div>
+            
             <div class="row optionUsuario" name="favMusica" style="display: none">
-                <p><a href="index.html.php?pageSelect=favmusica">Música favorita</a></p>
+                <form action="./pages/fav-musica/fav-musica.php" method="post">
+                    <?php   if(isset($_SESSION['id'])){ ?>
+                        <input name="idusuario" value="<?= $_SESSION['id']?>" hidden/>
+                    <?php } ?>
+                    <button type="submit" name="submit" class="button">
+                        <a href="">Música favorita</a>
+                    </button>
+                </form>
             </div>
+            
             <div class="row optionUsuario" name="favPaisaje" style="display: none">
                 <p><a href="index.html.php?pageSelect=favpaisaje">Paisajes favoritos</a></p>
             </div>
