@@ -26,6 +26,23 @@ body {
   margin-top: 2px;
 }
 
+/* Reiniciar boton */
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button; /* for input */
+}
+
 /* Parte superior del menú*/
 .header-top {
   background-color: #1c2833;
@@ -257,7 +274,7 @@ marquee p {
   padding-right: 2%;
   padding-bottom: 2%;
 
-  margin-bottom: 2%;
+  margin-bottom: 10%;
 
   border-right: 5px rgb(46, 204, 113) solid;
   border-left: 5px rgb(46, 204, 113) solid;
@@ -298,10 +315,6 @@ marquee p {
 
   border-left: 5px rgb(230, 126, 34) solid;
   border-right: 5px rgb(230, 126, 34) solid;
-}
-
-.fila-music {
-  margin-bottom: 50%;
 }
 
 /*Pie de pagina*/

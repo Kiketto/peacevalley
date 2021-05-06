@@ -4,7 +4,7 @@
 
 var opcionesAbout = new Array('contact', 'FAQ', 'developter');
 
-export function desplegableMenuOpcionesAbout(){
+function desplegableMenuOpcionesAbout(){
     for (var i = 0; i < opcionesAbout.length; i++){
         document.getElementsByName(opcionesAbout[i])[0].style.display = "block";
     }
@@ -47,6 +47,50 @@ function desplegableMenuOpcionesUsuario(){
         desplegado = 1;
         console.log(desplegado);
     }
+}
+
+//////////////////////////////////////////
+// Peticion AJAX Favorito musica
+/////////////////////////////////////////
+
+function anyadirFavoritoMusica(numeroMusica) {
+
+    var peticio_http = new XMLHttpRequest();
+
+    var idUsuario = document.getElementsByName("idUsuario")[0].value;
+    console.log(idUsuario);
+
+    var idCancion = document.getElementsByName("idMusica")[numeroMusica].value;
+    console.log(idCancion);
+
+    var url ='./src/app/fav/favMusica-component.php?idmusica='+idCancion+'&idusuario='+idUsuario;
+    console.log(url);
+
+    peticio_http.open('GET', url, true);
+    peticio_http.send(null); 
+
+}
+
+//////////////////////////////////////////
+// Peticion AJAX Favorito paisaje
+/////////////////////////////////////////
+
+function anyadirFavoritoPaisaje(numeroPaisaje) {
+
+    var peticio_http = new XMLHttpRequest();
+
+    var idUsuario = document.getElementsByName("idUsuario")[0].value;
+    console.log(idUsuario);
+
+    var idPaisaje = document.getElementsByName("idPaisaje")[numeroPaisaje].value;
+    console.log(idPaisaje);
+
+    var url ='./src/app/fav/favPaisaje-component.php?idpaisaje='+idPaisaje+'&idusuario='+idUsuario;
+    console.log(url);
+
+    peticio_http.open('GET', url, true);
+    peticio_http.send(null); 
+
 }
 
 //////////////////////////////////////////////////////

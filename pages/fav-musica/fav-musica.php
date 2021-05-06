@@ -2,16 +2,14 @@
 
 include_once '../../includes/db.inc.php';
 
-if(isset($_POST['submit'])){
-    if(isset($_POST['idusuario'])){
+if(isset($_REQUEST['submit'])){
+    if(isset($_REQUEST['idusuario'])){
 
-        $idUsuario = trim($_POST['idusuario']);
+        $idUsuario = trim($_REQUEST['idusuario']);
         
-        $sql = 'SELECT c.nombre, c.autor, c.url, c.urlsoundcloud FROM favmusica as f INNER JOIN cancion as c ON f.id_musicaFavMusica = c.id_cancion INNER JOIN usuario as u ON f.id_usuarioFavMusica = :idusuario';
-        $stmt = $pdo->prepare($sql);
-        $p = [':idusuario'=>$idUsuario];
-        
-        $resultado = $stmt->query($p);
+        $sql = 'SELECT DISTINCT c.id_cancion, c.nombre, c.autor, c.url, c.urlsoundcloud FROM favmusica as f INNER JOIN cancion as c ON f.id_musicaFavMusica = c.id_cancion INNER JOIN usuario as u ON f.id_usuarioFavMusica = '.$_REQUEST['idusuario'];
+       
+        $resultado = $pdo->query($sql);
 
         foreach ($resultado as $row){
             $cancionesfav[] = array(
@@ -21,11 +19,9 @@ if(isset($_POST['submit'])){
                 'cancionurlnombre' => $row['urlsoundcloud'],
                 'idcancion' => $row['id_cancion']
             );
-            echo 'echo';
-            include '../../index.html.php?pageSelect=escena';
+            header('location: ../../index.html.php?pageSelect=favmusica');
         }
     } else {
-        echo 'hola';
         header('location: ../../index.html.php?pageSelect=escena');
         exit();
     }
