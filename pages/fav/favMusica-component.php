@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../../includes/db.inc.php';
+require_once '../../includes/db.inc.php';
 
     $idMusica = trim($_REQUEST['idmusica']);
     $idUsuario = trim($_REQUEST['idusuario']);
@@ -10,15 +10,14 @@ require_once '../../../includes/db.inc.php';
     $p = [':idmusica'=>$idMusica, ':idusuario'=>$idUsuario];
     $stmt->execute($p);
         
-    if($stmt->rowCount() != 0) {
-        $sql = 'DELETE FROM favmusica WHERE id_musicaFavMusica = :idmusica AND id_usuarioFavMusica = :idusuario';
+    if($stmt->rowCount() == 0){
+        $sql = 'INSERT INTO favmusica (`id_usuarioFavMusica`,`id_musicaFavMusica`) VALUES (:idusuario, :idmusica)';
         $stmt = $pdo->prepare($sql);
         $p = [':idmusica'=>$idMusica, ':idusuario'=>$idUsuario];
         $stmt->execute($p);
-        echo "Se ha borrado con existo";
-        header('location: ./index.html.php?pageSelect=favmusica');
+        echo "Se ha añadido con existo";
         exit();
+        
     }
-
 
 ?>

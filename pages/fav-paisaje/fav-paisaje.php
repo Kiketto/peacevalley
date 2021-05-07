@@ -17,6 +17,7 @@ include_once './includes/db.inc.php';
                 $paisajesfav[] = array(
                     'name' => $row['nombre'],
                     'paisajeurl' => $row['url'],
+                    'idpaisaje' => $row['id_paisaje']
                 );
                 
             }

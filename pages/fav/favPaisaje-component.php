@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../../includes/db.inc.php';
+require_once '../../includes/db.inc.php';
 
     $idPaisaje = trim($_REQUEST['idpaisaje']);
     $idUsuario = trim($_REQUEST['idusuario']);

@@ -33,7 +33,11 @@ $arrayPages = array(
     
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5519d98401.js" crossorigin="anonymous"></script>
+    <script src="./src/js/jquery-3.6.0.min.js"></script>
+    <script src="./src/js/pagination.min.js"></script>
     <script src="./src/js/main.js"></script>
+    <script src="./src/js/jQuery.paginate.js"></script>
+    
 </head>
 <body>
     

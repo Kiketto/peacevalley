@@ -58,35 +58,25 @@ function anyadirFavoritoMusica(numeroMusica) {
     var peticio_http = new XMLHttpRequest();
 
     var idUsuario = document.getElementsByName("idUsuario")[0].value;
-    console.log(idUsuario);
-
     var idCancion = document.getElementsByName("idMusica")[numeroMusica].value;
-    console.log(idCancion);
-
-    var url ='./src/app/fav/favMusica-component.php?idmusica='+idCancion+'&idusuario='+idUsuario;
-    console.log(url);
+    var url ='./pages/fav/favMusica-component.php?idmusica='+idCancion+'&idusuario='+idUsuario;
 
     peticio_http.open('GET', url, true);
     peticio_http.send(null); 
-
 }
 
 function eliminarFavoritoMusica(numeroMusica) {
 
-    var peticio_http = new XMLHttpRequest();
+    peticio_http = new XMLHttpRequest();
+
+    peticio_http.onreadystatechange = recargarPaginaDespuesEliminarFavoritos;
 
     var idUsuario = document.getElementsByName("idUsuario")[0].value;
-    console.log(idUsuario);
-
     var idCancion = document.getElementsByName("idMusica")[numeroMusica].value;
-    console.log(idCancion);
-
-    var url ='./src/app/fav/eliminarFavMusica-component.php?idmusica='+idCancion+'&idusuario='+idUsuario;
-    console.log(url);
+    var url ='./pages/fav/eliminarFavMusica-component.php?idmusica='+idCancion+'&idusuario='+idUsuario;
 
     peticio_http.open('GET', url, true);
     peticio_http.send(null); 
-
 }
 
 //////////////////////////////////////////
@@ -98,18 +88,41 @@ function anyadirFavoritoPaisaje(numeroPaisaje) {
     var peticio_http = new XMLHttpRequest();
 
     var idUsuario = document.getElementsByName("idUsuario")[0].value;
-    console.log(idUsuario);
-
     var idPaisaje = document.getElementsByName("idPaisaje")[numeroPaisaje].value;
-    console.log(idPaisaje);
-
-    var url ='./src/app/fav/favPaisaje-component.php?idpaisaje='+idPaisaje+'&idusuario='+idUsuario;
-    console.log(url);
+    var url ='./pages/fav/favPaisaje-component.php?idpaisaje='+idPaisaje+'&idusuario='+idUsuario;
 
     peticio_http.open('GET', url, true);
     peticio_http.send(null); 
-
 }
+
+function eliminarFavoritoPaisaje(numeroPaisaje) {
+
+    peticio_http = new XMLHttpRequest();
+
+    peticio_http.onreadystatechange = recargarPaginaDespuesEliminarFavoritos;
+
+    var idUsuario = document.getElementsByName("idUsuario")[0].value;
+    var idPaisaje = document.getElementsByName("idPaisaje")[numeroPaisaje].value;
+    var url ='./pages/fav/eliminarFavPaisaje-component.php?idpaisaje='+idPaisaje+'&idusuario='+idUsuario;
+    console.log('entra')
+    peticio_http.open('GET', url, true);
+    peticio_http.send(null); 
+}
+
+/////////////////////////////////////////////
+// Peticion AJAX Respuesta al eliminar recargando la pagina
+////////////////////////////////////////////
+
+function recargarPaginaDespuesEliminarFavoritos() {
+    if(peticio_http.readyState == 4) {
+        if(peticio_http.status == 200) {  
+        location.reload();
+        }
+        else{  
+            alert("error: "+peticio_http.statusText);
+        }			
+    }
+}	
 
 //////////////////////////////////////////////////////
 // para iniciar eventos
