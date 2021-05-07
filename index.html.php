@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $pageSelect = 'escena';
 if(isset($_GET['pageSelect'])){
     $pageSelect = $_GET['pageSelect'];
@@ -11,7 +13,7 @@ $arrayPages = array(
     'contacto' => './pages/contact/contact.html.php',
     'FAQ' => './pages/faq/faq.html.php',
     'developter' => './pages/developter/developter.html.php',
-    'favmusica' => './pages/fav-musica/fav-musica.html.php',
+    'favmusica' => './pages/fav-musica/fav-musica.php',
     'favpaisaje' => './pages/fav-paisaje/fav-paisaje.php'
 );
 

@@ -12,7 +12,7 @@
             <?php if($filasPaisajes == 1){ ?>
                 <div class="row" style="margin-bottom: 3%">
             <?php } ?>
-            <div class="col paisaje">
+            <div class="col-4 paisaje">
                 <img class="d-block mx-auto" name="<?= $paisaje['name'] ?>" src="<?= $paisaje['paisajeurl'] ?>"/>
             
                 <input name="idPaisaje" value="<?= $paisaje['idPaisaje']?>" hidden/>

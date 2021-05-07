@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 
 <script src="..\..\js\header-component.js"></script>
 <div id="header">
@@ -18,14 +17,7 @@
             </div>
             
             <div class="row optionUsuario" name="favMusica" style="display: none">
-                <form action="./pages/fav-musica/fav-musica.php" method="post">
-                    <?php   if(isset($_SESSION['id'])){ ?>
-                        <input name="idusuario" value="<?= $_SESSION['id']?>" hidden/>
-                    <?php } ?>
-                    <button type="submit" name="submit" class="button">
-                        <a href="">Música favorita</a>
-                    </button>
-                </form>
+                <p><a href="index.html.php?pageSelect=favmusica">Música favoritos</a></p>
             </div>
             
             <div class="row optionUsuario" name="favPaisaje" style="display: none">

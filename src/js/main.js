@@ -71,6 +71,24 @@ function anyadirFavoritoMusica(numeroMusica) {
 
 }
 
+function eliminarFavoritoMusica(numeroMusica) {
+
+    var peticio_http = new XMLHttpRequest();
+
+    var idUsuario = document.getElementsByName("idUsuario")[0].value;
+    console.log(idUsuario);
+
+    var idCancion = document.getElementsByName("idMusica")[numeroMusica].value;
+    console.log(idCancion);
+
+    var url ='./src/app/fav/eliminarFavMusica-component.php?idmusica='+idCancion+'&idusuario='+idUsuario;
+    console.log(url);
+
+    peticio_http.open('GET', url, true);
+    peticio_http.send(null); 
+
+}
+
 //////////////////////////////////////////
 // Peticion AJAX Favorito paisaje
 /////////////////////////////////////////
