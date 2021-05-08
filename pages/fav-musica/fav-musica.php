@@ -28,7 +28,7 @@ include_once './includes/db.inc.php';
             echo 'No tienes ninguna música agregada a favoritos';
         }
     } else {
-        echo 'falla';
+        echo 'Debes registrarte o iniciar sesion';
         exit();
     }
 

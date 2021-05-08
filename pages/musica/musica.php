@@ -2,26 +2,20 @@
 
 include_once './includes/db.inc.php';
 
-$limit = 12;
+$limit = 9;
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
-$start = ($page -1) * $limit;
+$start = ($page - 1) * $limit;
+
+$sql = 'SELECT * FROM `cancion`';
+$resultado1 = $pdo->query($sql);
+$numberOfResults = $resultado1->rowCount();
+$pages = ceil($numberOfResults / $limit);
+
+$Previous = $page - 1;
+$Next = $page + 1;
 
 $sql = 'SELECT `id_cancion`,`url`,`nombre`,`autor`,`urlsoundcloud` FROM `cancion` LIMIT '.$start.', '.$limit;
 $resultado = $pdo->query($sql);
-
-$sql = 'SELECT count(`id_cancion`) AS id FROM `cancion`';
-$resultado1 = $pdo->query($sql);
-$total = $resultado1->rowCount();
-$pages = ceil($total / $limit);
-
- if($page == $pages){
-			$Next = 1;
-		 $Next = ($Next);
-			}
-if($page == 1){
-			$Previous = $pages;
-		 $Previous = ($Previous);
-			}
 
 foreach ($resultado as $row){
     $canciones[] = array(

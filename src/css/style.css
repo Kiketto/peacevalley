@@ -528,3 +528,30 @@ label {
   width: 100%;
   color: white;
 }
+
+/* Paginacion */
+
+.pagination > li > a {
+  background-color: white;
+  color: #5a4181;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+  color: #1c2833;
+  background-color: white;
+  border-color: #ddd;
+}
+
+.pagination > .active > a {
+  color: white;
+  background-color: #1c2833 !important;
+  border: solid 1px #ddd !important;
+}
+
+.pagination > .active > a:hover {
+  background-color: #1c2833 !important;
+  border: solid 1px rgb(168, 168, 168);
+}

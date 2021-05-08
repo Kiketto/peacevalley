@@ -34,4 +34,32 @@
             ?>
         <?php } ?>
     </div>
+     <!-- Paginacion -->
+    <nav aria-label="Page navigation" id="nav">
+        <ul class="pagination justify-content-center">
+            
+            <li class="page-item <?php if($page == 1){ echo 'disabled';}?>">
+                <a class="page-link" href="index.html.php?pageSelect=paisaje&page=<?= $Previous ?>" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            
+                <?php if($page != 1){?>
+                <li class="page-item">
+                    <a class="page-link" href="index.html.php?pageSelect=paisaje&page=<?= $page - 1 ?>"><?= $page - 1 ?></a>
+                </li>
+                <?php } ?>
+                <li class="page-item active">
+                    <a class="page-link" href="index.html.php?pageSelect=paisaje&page=<?= $page ?>"><?= $page ?></a>
+                </li>
+                <?php if($page != $pages){?>
+                <li class="page-item">
+                    <a class="page-link" href="index.html.php?pageSelect=paisaje&page=<?= $page + 1 ?>"><?= $page + 1 ?></a>
+                </li>
+                <?php } ?>
+
+
+            <li class="page-item <?php if($page == $pages){ echo 'disabled';}?>">
+                <a class="page-link" href="index.html.php?pageSelect=paisaje&page=<?= $Next ?>">Next</a>
+            </li>
+        </ul>
+    </nav>
 </div> <!-- content -->

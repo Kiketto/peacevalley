@@ -27,6 +27,6 @@ include_once './includes/db.inc.php';
             echo 'No tienes ningun paisaje agregado a favoritos';
         }
     } else {
-        echo 'falla';
+        echo 'Debes registrarte o iniciar sesion';
         exit();
     }
