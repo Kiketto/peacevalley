@@ -22,6 +22,15 @@
                 <div class="ask-question-input">
                     <h4>Contacta con nosotros</h4>
                     <hr>
+                    <?php 
+                        if(!empty($error)){
+                            echo '<div class="alert alert-danger">'.$error.'</div>';
+                        }
+                        
+                        if(!empty($success)){
+                            echo '<div class="alert alert-success">'.$success.'</div>';
+                        }
+			        ?>
                     <form action="./pages/contact/contactform.php" method="post">
                         <div class="row">
                             <div class="col">
@@ -44,7 +53,7 @@
                         <div class="publish-button">
                             <button type="submit" name="submit" class="publis">Enviar</button>
                         </div>                     
-                    </form>  
+                    </form>
                 </div>
             </div>
         </div>

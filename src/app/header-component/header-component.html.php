@@ -1,5 +1,4 @@
 
-<script src="..\..\js\header-component.js"></script>
 <div id="header">
     <div class="letrero" name="letrero">
         <marquee id="marco"><p>Registrate en el Peace Valley para poder crear escenas o guardarlas en favoritos!</p></marquee></div>
@@ -10,21 +9,28 @@
         <div class="col-3" name="usuario" style="text-align: right;">
             
             <div class="option-usuario">
-            <?php if(isset($_SESSION['usu'])){ ?>    
-                <p><a href="#"><?= $_SESSION['usu'] ?> </a>
-                <img style="height: 15px; width: 15px;" name="listfav" src="./src/image/icons8-expand-arrow-32.png" /></p>
-            <?php ;} ?>
+                <?php if(isset($_SESSION['usu'])){ ?>    
+                    <p><a href="#"><?= $_SESSION['usu'] ?> </a>
+                    <img style="height: 15px; width: 15px;" name="listfav" src="./src/image/icons8-expand-arrow-32.png" /></p>
+                <?php ;} ?>
             </div>
-            
-            <div class="row optionUsuario" name="favMusica" style="display: none">
-                <p><a href="index.html.php?pageSelect=favmusica">Música favoritos</a></p>
-            </div>
-            
-            <div class="row optionUsuario" name="favPaisaje" style="display: none">
-                <p><a href="index.html.php?pageSelect=favpaisaje">Paisajes favoritos</a></p>
-            </div>
+
+            <?php if(isset($_SESSION['usu']) && $_SESSION['usu'] !== ''){ ?>   
+                <div class="row optionUsuario" name="favMusica" style="display: none">
+                    <p><a href="index.html.php?pageSelect=favmusica">Música favoritos</a></p>
+                </div>
+                
+                <div class="row optionUsuario" name="favPaisaje" style="display: none">
+                    <p><a href="index.html.php?pageSelect=favpaisaje">Paisajes favoritos</a></p>
+                </div>
+            <?php } else {?>
+                <div class="row optionUsuario" name="administracionContacto" style="display: none">
+                    <p><a href="index.html.php?pageSelect=adContacto">Solicitudes Formulario</a></p>
+                </div>
+            <?php } ?>
         </div>      
         
+
         <?php if(isset($_SESSION['usu'])){ ?>
             <div class="col-2" style="text-align: center"><a href=".\includes\logout.inc.php">Desconectar</a></div>
         <?php } else {?>

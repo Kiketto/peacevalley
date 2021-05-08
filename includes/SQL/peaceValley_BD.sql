@@ -55,3 +55,12 @@ CREATE TABLE favpaisaje (
   CONSTRAINT FK_idUsuarioFavPaisaje FOREIGN KEY (id_usuarioFavPaisaje)
       REFERENCES usuario (id_usuario)
 );
+
+CREATE TABLE formulario (
+id_formulario INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(20) NOT NULL,
+email VARCHAR(50) NOT NULL,
+pregunta VARCHAR (200) NOT NULL,
+detalles VARCHAR (500)
+
+);
