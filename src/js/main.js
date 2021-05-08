@@ -33,21 +33,32 @@ var opcionesUsuario = new Array('favMusica', 'favPaisaje');
 var desplegado = 1;
 
 function desplegableMenuOpcionesUsuario(){
-    console.log('pasa');
+
     if(desplegado == 1){
         for (var i = 0; i < opcionesUsuario.length; i++){
             document.getElementsByName(opcionesUsuario[i])[0].style.display = "block";
         }
         desplegado = 0;
-        console.log(desplegado);
     } else {
         for (var i = 0; i < opcionesUsuario.length; i++){
             document.getElementsByName(opcionesUsuario[i])[0].style.display = "none";
         }
         desplegado = 1;
-        console.log(desplegado);
     }
 }
+
+function desplegableMenuOpcionesAdministracion(){
+
+    if(desplegado == 1){
+        document.getElementsByName('administracionContacto')[0].style.display = "block";
+        desplegado = 0;
+    } else {
+        document.getElementsByName('administracionContacto')[0].style.display = "none";
+        desplegado = 1;
+    }
+}
+
+
 
 //////////////////////////////////////////
 // Peticion AJAX Favorito musica
@@ -69,7 +80,7 @@ function eliminarFavoritoMusica(numeroMusica) {
 
     peticio_http = new XMLHttpRequest();
 
-    peticio_http.onreadystatechange = recargarPaginaDespuesEliminarFavoritos;
+    peticio_http.onreadystatechange = recargarPaginaDespuesEliminar;
 
     var idUsuario = document.getElementsByName("idUsuario")[0].value;
     var idCancion = document.getElementsByName("idMusica")[numeroMusica].value;
@@ -99,10 +110,28 @@ function eliminarFavoritoPaisaje(numeroPaisaje) {
 
     peticio_http = new XMLHttpRequest();
 
-    peticio_http.onreadystatechange = recargarPaginaDespuesEliminarFavoritos;
+    peticio_http.onreadystatechange = recargarPaginaDespuesEliminar;
 
     var idUsuario = document.getElementsByName("idUsuario")[0].value;
     var idPaisaje = document.getElementsByName("idPaisaje")[numeroPaisaje].value;
+    var url ='./pages/fav/eliminarFavPaisaje-component.php?idpaisaje='+idPaisaje+'&idusuario='+idUsuario;
+    console.log('entra')
+    peticio_http.open('GET', url, true);
+    peticio_http.send(null); 
+}
+
+//////////////////////////////////////////
+// Peticion AJAX Eliminar Consulta
+/////////////////////////////////////////
+
+function eliminarConsulta(numeroConsulta) {
+
+    peticio_http = new XMLHttpRequest();
+
+    peticio_http.onreadystatechange = recargarPaginaDespuesEliminar;
+
+    var idUsuario = document.getElementsByName("idUsuario")[0].value;
+    var idPaisaje = document.getElementsByName("idPaisaje")[numeroConsulta].value;
     var url ='./pages/fav/eliminarFavPaisaje-component.php?idpaisaje='+idPaisaje+'&idusuario='+idUsuario;
     console.log('entra')
     peticio_http.open('GET', url, true);
@@ -113,7 +142,7 @@ function eliminarFavoritoPaisaje(numeroPaisaje) {
 // Peticion AJAX Respuesta al eliminar recargando la pagina
 ////////////////////////////////////////////
 
-function recargarPaginaDespuesEliminarFavoritos() {
+function recargarPaginaDespuesEliminar() {
     if(peticio_http.readyState == 4) {
         if(peticio_http.status == 200) {  
         location.reload();
@@ -131,7 +160,6 @@ function recargarPaginaDespuesEliminarFavoritos() {
 function iniciarEventos(){
     document.getElementById("bs").addEventListener('click',borrarValorCuandoPulsasBuscador,false);
     document.getElementsByName("about")[0].addEventListener('mouseover',desplegableMenuOpcionesAbout,false);
-    document.getElementsByName('listfav')[0].addEventListener('click',desplegableMenuOpcionesUsuario,false);
 }
 
 window.onload = iniciarEventos;

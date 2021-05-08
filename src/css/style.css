@@ -555,3 +555,22 @@ label {
   background-color: #1c2833 !important;
   border: solid 1px rgb(168, 168, 168);
 }
+
+.tablaSolicitudes {
+  margin-left: 5%;
+}
+
+.tablaSolicitudes th {
+  border: white 2px solid;
+  padding: 1%;
+}
+
+.tablaSolicitudes td {
+  border: white 2px solid;
+  padding: 1%;
+}
+
+.tablaSolicitudes tr {
+  border: white 2px solid;
+  padding: 1%;
+}

@@ -6,16 +6,16 @@
         <div class="col-1"></div>
         <div class="col"></div>
         <div class="col-1" style="text-align: right" hidden><a href="#">Lista</a></div>
-        <div class="col-3" name="usuario" style="text-align: right;">
+        <div class="col-4" name="usuario" style="text-align: right;">
             
             <div class="option-usuario">
                 <?php if(isset($_SESSION['usu'])){ ?>    
                     <p><a href="#"><?= $_SESSION['usu'] ?> </a>
-                    <img style="height: 15px; width: 15px;" name="listfav" src="./src/image/icons8-expand-arrow-32.png" /></p>
+                    <img style="height: 15px; width: 15px;" name="listfav" onclick="<?php if(isset($_SESSION['usu']) && $_SESSION['usu'] == 'pv.peacevalley@administrador.com'){ echo 'desplegableMenuOpcionesAdministracion();';} else { echo 'desplegableMenuOpcionesUsuario();';} ?>"  src="./src/image/icons8-expand-arrow-32.png" /></p>
                 <?php ;} ?>
             </div>
 
-            <?php if(isset($_SESSION['usu']) && $_SESSION['usu'] !== ''){ ?>   
+            <?php if(isset($_SESSION['usu']) && $_SESSION['usu'] !== 'pv.peacevalley@administrador.com'){ ?>   
                 <div class="row optionUsuario" name="favMusica" style="display: none">
                     <p><a href="index.html.php?pageSelect=favmusica">Música favoritos</a></p>
                 </div>
@@ -25,7 +25,7 @@
                 </div>
             <?php } else {?>
                 <div class="row optionUsuario" name="administracionContacto" style="display: none">
-                    <p><a href="index.html.php?pageSelect=adContacto">Solicitudes Formulario</a></p>
+                    <p><a href=".\src\app\administrador-component\administrador-component.html.php">Solicitudes Formulario</a></p>
                 </div>
             <?php } ?>
         </div>      
