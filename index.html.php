@@ -42,7 +42,13 @@ $arrayPages = array(
 	<div id="page" class="container">
         <?php include_once './src/app/header-component/header-component.html.php' ?>
 
-		<?php include_once $arrayPages[$pageSelect] ?>
+		<?php 
+        if (isset($arrayPages[$pageSelect])) {
+            include_once $arrayPages[$pageSelect]; }
+        else {
+            echo 'Deja de tocar la URL esta pagina no existe';
+        }
+        ?>
 
 		<?php include_once './src/app/footer-component/footer-component.html.php' ?>
 

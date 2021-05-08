@@ -14,6 +14,7 @@ $pages = ceil($numberOfResults / $limit);
 $Previous = $page - 1;
 $Next = $page + 1;
 
+try{
 $sql = 'SELECT `id_paisaje`,`url`,`nombre` FROM `paisaje` LIMIT '.$start.', '.$limit;
 $resultado = $pdo->query($sql);
 
@@ -23,6 +24,8 @@ foreach ($resultado as $row){
         'paisajeurl' => $row['url'],
         'idPaisaje' => $row['id_paisaje']
     );
+}
+} catch (Exception $e){
 }
   
 

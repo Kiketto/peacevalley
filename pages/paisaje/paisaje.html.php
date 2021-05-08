@@ -6,6 +6,7 @@
 
     <div class="content-paisajes">
         <?php 
+        if(isset($paisajes)){
         $filasPaisajes = 0; 
         $numeroPaisaje = 0 ;
         foreach($paisajes as $paisaje){ $filasPaisajes = $filasPaisajes + 1; ?>
@@ -32,7 +33,10 @@
             $filasPaisajes = 0 ;} 
             $numeroPaisaje = $numeroPaisaje + 1;
             ?>
-        <?php } ?>
+        <?php }
+        } else {
+            echo 'En esta pagina no hay paisajes, vuelve hacia atras y por favor no manipule la URL';
+        } ?>
     </div>
      <!-- Paginacion -->
     <nav aria-label="Page navigation" id="nav">

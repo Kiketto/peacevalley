@@ -25,7 +25,8 @@
             <?php if($filasPaisajes == 3){ ?>
                 </div>
             <?php 
-            $filasPaisajes = 0 ;} 
+            $filasPaisajes = 0 ;}
+            $numeroPaisaje = $numeroPaisaje + 1;  
             ?>
         <?php } ?>
     </div>

@@ -14,6 +14,7 @@ $pages = ceil($numberOfResults / $limit);
 $Previous = $page - 1;
 $Next = $page + 1;
 
+try {
 $sql = 'SELECT `id_cancion`,`url`,`nombre`,`autor`,`urlsoundcloud` FROM `cancion` LIMIT '.$start.', '.$limit;
 $resultado = $pdo->query($sql);
 
@@ -26,7 +27,9 @@ foreach ($resultado as $row){
         'idcancion' => $row['id_cancion']
     );
 }
-  
+} catch (Exception $e){
+}
+
 
 include 'musica.html.php'
 
