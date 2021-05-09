@@ -120,24 +120,6 @@ function eliminarFavoritoPaisaje(numeroPaisaje) {
     peticio_http.send(null); 
 }
 
-//////////////////////////////////////////
-// Peticion AJAX Eliminar Consulta
-/////////////////////////////////////////
-
-function eliminarConsulta(numeroConsulta) {
-
-    peticio_http = new XMLHttpRequest();
-
-    peticio_http.onreadystatechange = recargarPaginaDespuesEliminar;
-
-    var idUsuario = document.getElementsByName("idUsuario")[0].value;
-    var idPaisaje = document.getElementsByName("idPaisaje")[numeroConsulta].value;
-    var url ='./pages/fav/eliminarFavPaisaje-component.php?idpaisaje='+idPaisaje+'&idusuario='+idUsuario;
-    console.log('entra')
-    peticio_http.open('GET', url, true);
-    peticio_http.send(null); 
-}
-
 /////////////////////////////////////////////
 // Peticion AJAX Respuesta al eliminar recargando la pagina
 ////////////////////////////////////////////
