@@ -3,12 +3,16 @@
         <img src="./src/image/icons8-picture-in-picture-50.png" style="height: 64px; width: 64px"></img>    
         Escenas
     </h1>
+    <div class="row alert alert-success" name="alertMessage">
+        <p>Segun las politicas algunos navegadores debes realizar alguna accion para poder escuchar la música de las escenas automaticamente</p>
+        <button type="button" class="btn btn-success" name="alertButton">Vale</button> 
+    </div>
 
     <div class="content-escenas">
         <div class="row fila-escenas">
             <div class="col escena">
-                <img class="d-block mx-auto" name="Escena" src="https://64.media.tumblr.com/5bd591b8d63993298385fd7febdd2968/tumblr_ndpknccWbz1s63c00o1_400.gif"/>
-                <audio name="musica1" src="https://dl.dropbox.com/s/wmwhsn1fq3gnmrc/Mit-Rich_-_That_Lo-Fi_Hip-Hop.mp3?dl=0" controls></audio>
+                <img class="d-block mx-auto" onmouseover="musicaPlay('musica1');" onmouseout="musicaStop('musica1');" name="Escena" src="https://64.media.tumblr.com/5bd591b8d63993298385fd7febdd2968/tumblr_ndpknccWbz1s63c00o1_400.gif"/>
+                <audio name="musica1" src="https://dl.dropbox.com/s/wmwhsn1fq3gnmrc/Mit-Rich_-_That_Lo-Fi_Hip-Hop.mp3?dl=0"></audio>
             </div>
             <div class="col escena">
                 <img class="d-block mx-auto" src="https://66.media.tumblr.com/f349d8f50f26bd0df529a1d518c8ceaa/tumblr_nhxftlKkzD1s63c00o1_400.gif"/>

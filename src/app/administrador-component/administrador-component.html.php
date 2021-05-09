@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if($_SESSION['usu'] !== 'pv.peacevalley@gmail.com'){
+    header('Location: ../../../index.html.php');
+    
+}
 
 require_once '..\..\..\includes\db.inc.php';
 

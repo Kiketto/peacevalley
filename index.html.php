@@ -44,8 +44,8 @@ $arrayPages = array(
 
 		<?php 
         if (isset($arrayPages[$pageSelect])) {
-            include_once $arrayPages[$pageSelect]; }
-        else {
+            include_once $arrayPages[$pageSelect]; 
+        } else {
             echo 'Deja de tocar la URL esta pagina no existe';
         }
         ?>

@@ -58,7 +58,28 @@ function desplegableMenuOpcionesAdministracion(){
     }
 }
 
+/////////////////////////////////////////
+// Alert Escenas Politicas
+/////////////////////////////////////////
 
+function alertEscenas(){
+    document.getElementsByName('alertMessage')[0].style.visibility = "hidden";
+    document.getElementsByName('alertMessage')[0].style.display = "none";
+}
+
+///////////////////////////////////////////
+// Musica play and stop mouseover
+///////////////////////////////////////////
+
+function musicaPlay(nameMusica){
+    var musica = document.getElementsByName(nameMusica)[0];
+    musica.play();
+}
+
+function musicaStop(nameMusica){
+    var musica = document.getElementsByName(nameMusica)[0];
+    musica.pause();
+}
 
 //////////////////////////////////////////
 // Peticion AJAX Favorito musica
@@ -142,6 +163,7 @@ function recargarPaginaDespuesEliminar() {
 function iniciarEventos(){
     document.getElementById("bs").addEventListener('click',borrarValorCuandoPulsasBuscador,false);
     document.getElementsByName("about")[0].addEventListener('mouseover',desplegableMenuOpcionesAbout,false);
+    document.getElementsByName("alertButton")[0].addEventListener('click',alertEscenas,false);
 }
 
 window.onload = iniciarEventos;

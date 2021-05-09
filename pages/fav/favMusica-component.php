@@ -16,8 +16,7 @@ require_once '../../includes/db.inc.php';
         $p = [':idmusica'=>$idMusica, ':idusuario'=>$idUsuario];
         $stmt->execute($p);
         echo "Se ha añadido con existo";
-        exit();
-        
+        exit();   
     }
 
 ?>
