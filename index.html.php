@@ -14,7 +14,7 @@ $arrayPages = array(
     'FAQ' => './pages/faq/faq.html.php',
     'developter' => './pages/developter/developter.html.php',
     'favmusica' => './pages/fav-musica/fav-musica.php',
-    'favpaisaje' => './pages/fav-paisaje/fav-paisaje.php'
+    'favpaisaje' => './pages/fav-paisaje/fav-paisaje.php',
     'favescena' => './pages/fav-escena/fav-escena.php'
 );
 

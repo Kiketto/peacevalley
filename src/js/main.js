@@ -104,7 +104,7 @@ function eliminarFavoritoEscena(numeroEscena) {
     peticio_http.onreadystatechange = recargarPaginaDespuesEliminar;
 
     var idUsuario = document.getElementsByName("idUsuario")[0].value;
-    var idEscena = document.getElementsByName("idEscena")[numeroMusica].value;
+    var idEscena = document.getElementsByName("idEscena")[numeroEscena].value;
     var url ='./pages/fav/eliminarFavEscena-component.php?idescena='+idEscena+'&idusuario='+idUsuario;
 
     peticio_http.open('GET', url, true);
