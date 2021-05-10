@@ -29,7 +29,7 @@ function borrarValorCuandoPulsasBuscador(){
 // Desplegable Usuario
 //////////////////////////////////////////
 
-var opcionesUsuario = new Array('favMusica', 'favPaisaje');
+var opcionesUsuario = new Array('favMusica', 'favPaisaje', 'favEscena');
 var desplegado = 1;
 
 function desplegableMenuOpcionesUsuario(){
@@ -79,6 +79,36 @@ function musicaPlay(nameMusica){
 function musicaStop(nameMusica){
     var musica = document.getElementsByName(nameMusica)[0];
     musica.pause();
+}
+
+//////////////////////////////////////////
+// Peticion AJAX Favorito escena
+/////////////////////////////////////////
+
+function anyadirFavoritoEscena(numeroEscena) {
+
+    var peticio_http = new XMLHttpRequest();
+
+    var idUsuario = document.getElementsByName("idUsuario")[0].value;
+    var idEscena = document.getElementsByName("idEscena")[numeroEscena].value;
+    var url ='./pages/fav/favEscena-component.php?idEscena='+idEscena+'&idUsuario='+idUsuario;
+
+    peticio_http.open('GET', url, true);
+    peticio_http.send(null); 
+}
+
+function eliminarFavoritoEscena(numeroEscena) {
+
+    peticio_http = new XMLHttpRequest();
+
+    peticio_http.onreadystatechange = recargarPaginaDespuesEliminar;
+
+    var idUsuario = document.getElementsByName("idUsuario")[0].value;
+    var idEscena = document.getElementsByName("idEscena")[numeroMusica].value;
+    var url ='./pages/fav/eliminarFavEscena-component.php?idescena='+idEscena+'&idusuario='+idUsuario;
+
+    peticio_http.open('GET', url, true);
+    peticio_http.send(null); 
 }
 
 //////////////////////////////////////////

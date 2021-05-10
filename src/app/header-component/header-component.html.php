@@ -17,11 +17,15 @@
 
             <?php if(isset($_SESSION['usu']) && $_SESSION['usu'] !== 'pv.peacevalley@administrador.com'){ ?>   
                 <div class="row optionUsuario" name="favMusica" style="display: none">
-                    <p><a href="index.html.php?pageSelect=favmusica">Música favoritos</a></p>
+                    <p><a href="index.html.php?pageSelect=favmusica">Música favorita</a></p>
                 </div>
                 
                 <div class="row optionUsuario" name="favPaisaje" style="display: none">
                     <p><a href="index.html.php?pageSelect=favpaisaje">Paisajes favoritos</a></p>
+                </div>
+
+                <div class="row optionUsuario" name="favEscena" style="display: none">
+                    <p><a href="index.html.php?pageSelect=favescena">Escenas favoritas</a></p>
                 </div>
             <?php } else {?>
                 <div class="row optionUsuario" name="administracionContacto" style="display: none">

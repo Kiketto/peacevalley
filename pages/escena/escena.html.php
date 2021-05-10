@@ -1,40 +1,84 @@
 <div id="content">
-    <h1 class="titulo"> 
+<div class="row">
+    <h1 class="titulo col"> 
         <img src="./src/image/icons8-picture-in-picture-50.png" style="height: 64px; width: 64px"></img>    
         Escenas
     </h1>
-    <div class="row alert alert-success" name="alertMessage">
-        <p>Segun las politicas algunos navegadores debes realizar alguna accion para poder escuchar la música de las escenas automaticamente</p>
+    <?php if(!isset($page) || $page == 1){ ?>
+    <div class="col alert alert-success" name="alertMessage">
+        <p>Si recargas la página recuerdar hacer click en "Vale".</p>
         <button type="button" class="btn btn-success" name="alertButton">Vale</button> 
     </div>
+    <?php } ?>
+</div>
 
     <div class="content-escenas">
-        <div class="row fila-escenas">
-            <div class="col escena">
-                <img class="d-block mx-auto" onmouseover="musicaPlay('musica1');" onmouseout="musicaStop('musica1');" name="Escena" src="https://64.media.tumblr.com/5bd591b8d63993298385fd7febdd2968/tumblr_ndpknccWbz1s63c00o1_400.gif"/>
-                <audio name="musica1" src="https://dl.dropbox.com/s/wmwhsn1fq3gnmrc/Mit-Rich_-_That_Lo-Fi_Hip-Hop.mp3?dl=0"></audio>
-            </div>
-            <div class="col escena">
-                <img class="d-block mx-auto" src="https://66.media.tumblr.com/f349d8f50f26bd0df529a1d518c8ceaa/tumblr_nhxftlKkzD1s63c00o1_400.gif"/>
-            </div>
-            <div class="col escena">
-                <img class="d-block mx-auto" src="https://66.media.tumblr.com/75665a0ab2ab686047f0501147d12351/tumblr_nhto56kBfQ1s63c00o1_400.gif"/>
-            </div>
+        <?php 
+        if(isset($escenas)){
+            $filasEscenas = 0;
+            $numeroEscena = 0 ;
+            foreach($escenas as $escena){ $filasEscenas = $filasEscenas + 1;
+                if($filasEscenas == 1){ 
+        ?>
+            <div class="row fila-escenas" style="margin-bottom: 3%">
+        <?php } ?>
             
-        </div>
-        
-        <div class="row fila-escenas">
-            <div class="col escena">
-                <img class="d-block mx-auto" src="https://64.media.tumblr.com/a22c643fb26f00665231a6bd33462bd4/tumblr_mgds4bRpUL1rmi8p6o1_400.gif"/>
-            </div>
-            <div class="col escena">
-                <img class="d-block mx-auto" src="https://64.media.tumblr.com/6850a78ec35cd5b27dd88f59e5822073/tumblr_mhi39yiX7C1rmi8p6o1_500.gif"/>
-            </div>
-            <div class="col escena">
-                <img class="d-block mx-auto" src="https://64.media.tumblr.com/baeb3be0fb41e15620d9ddfc355c9746/tumblr_mhrkx6PHUV1s4hh1ao1_500.gif"/>
-            </div>
+            <div class="col-4 escena">
+                <div class="col escena">
+            <img class="d-block mx-auto" onmouseover="musicaPlay('<?= $escena['name'].$escena['idescena'].$filasEscenas.$numeroEscena ?>');" onmouseout="musicaStop('<?= $escena['name'].$escena['idescena'].$filasEscenas.$numeroEscena ?>');" name="Escena" src="<?= $escena['paisajeurl'] ?>"/>
+                    <audio name="<?= $escena['name'].$escena['idescena'].$filasEscenas.$numeroEscena ?>" src="<?= $escena['cancionurl']?>"></audio>
+                </div>
             
-        </div>
+                <input name="idEscena" value="<?= $escena['idescena']?>" hidden/>
+                <?php   
+                if(isset($_SESSION['id'])){ 
+                ?>
+                    <input name="idUsuario" value="<?= $_SESSION['id']?>" hidden/>
+                        
+                    <button name="bFavoritos" onclick="anyadirFavoritoEscena(<?= $numeroEscena ?>);" class="button w-100">
+                        Favoritos <img src="./src/image/icons8-add-to-favorites-32.png" style="height: 20px; width: 20px"/>
+                    </button>
+                <?php } ?>
+            </div>
 
+            <?php if($filasEscenas == 3){ ?>
+                </div>
+            <?php 
+            $filasEscenas = 0 ;}
+            $numeroEscena = $numeroEscena + 1;
+            ?>
+        <?php }
+        } else {
+            echo 'En esta pagina no hay escenas, vuelve hacia atras y por favor no manipule la URL';
+        } ?>
     </div>
+    <!-- Paginacion -->
+    <nav aria-label="Page navigation" id="nav">
+        <ul class="pagination justify-content-center">
+            
+            <li class="page-item <?php if($page == 1){ echo 'disabled';}?>">
+                <a class="page-link" href="index.html.php?pageSelect=escena&page=<?= $Previous ?>" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            
+                <?php if($page != 1){?>
+                <li class="page-item">
+                    <a class="page-link" href="index.html.php?pageSelect=escena&page=<?= $page - 1 ?>"><?= $page - 1 ?></a>
+                </li>
+                <?php } ?>
+                <li class="page-item active">
+                    <a class="page-link" href="index.html.php?pageSelect=escena&page=<?= $page ?>"><?= $page ?></a>
+                </li>
+                <?php if($page != $pages){?>
+                <li class="page-item">
+                    <a class="page-link" href="index.html.php?pageSelect=escena&page=<?= $page + 1 ?>"><?= $page + 1 ?></a>
+                </li>
+                <?php } ?>
+
+
+            <li class="page-item <?php if($page == $pages){ echo 'disabled';}?>">
+                <a class="page-link" href="index.html.php?pageSelect=escena&page=<?= $Next ?>">Next</a>
+            </li>
+        </ul>
+    </nav>
+    
 </div> <!-- content -->

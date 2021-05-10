@@ -56,6 +56,16 @@ CREATE TABLE favpaisaje (
       REFERENCES usuario (id_usuario)
 );
 
+CREATE TABLE favescena (
+	id_favEscena INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuarioFavEscena INT NOT NULL,
+    id_escenaFavEscena INT NOT NULL,
+    CONSTRAINT FK_idEscenaFavEscena FOREIGN KEY (id_escenaFavEscena)
+      REFERENCES escena (id_escena),
+  CONSTRAINT FK_idUsuarioFavEscena FOREIGN KEY (id_usuarioFavEscena)
+      REFERENCES usuario (id_usuario)
+);
+
 CREATE TABLE formulario (
 id_formulario INT AUTO_INCREMENT PRIMARY KEY,
 nombre VARCHAR(20) NOT NULL,
