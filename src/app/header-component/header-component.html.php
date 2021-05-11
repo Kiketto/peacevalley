@@ -29,16 +29,16 @@
                 </div>
             <?php } else {?>
                 <div class="row optionUsuario" name="administracionContacto" style="display: none">
-                    <p><a href=".\src\app\administrador-component\administrador-component.html.php">Solicitudes Formulario</a></p>
+                    <p><a href="./src/app/administrador-component/administrador-component.html.php">Solicitudes Formulario</a></p>
                 </div>
             <?php } ?>
         </div>      
         
 
         <?php if(isset($_SESSION['usu'])){ ?>
-            <div class="col-2" style="text-align: center"><a href=".\includes\logout.inc.php">Desconectar</a></div>
+            <div class="col-2" style="text-align: center"><a href="./includes/logout.inc.php">Desconectar</a></div>
         <?php } else {?>
-            <div class="col-2" style="text-align: center"><a href=".\src\app\login-component\login-component.html.php">Iniciar sesión</a></div>
+            <div class="col-2" style="text-align: center"><a href="./src/app/login-component/login-component.html.php">Iniciar sesión</a></div>
         <?php } ?>
         
     <div id="header-bottom" class="row menu border-bottom-gradient">

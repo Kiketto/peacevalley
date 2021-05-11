@@ -1,9 +1,9 @@
 
 <?php
 session_start();
-if(isset($_SESSION)){
+if(isset($_SESSION['usu'])){
     session_destroy();
-    header('location: ..\index.html.php');
+    header('Location: ../index.html.php');
     exit();
 }
 ?>

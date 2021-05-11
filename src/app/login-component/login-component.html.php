@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once '..\..\..\includes\db.inc.php';
+require_once '../../../includes/db.inc.php';
 $error = '';
 $success = '';
 
@@ -21,13 +21,12 @@ if(isset($_POST['submit'])){
 			if($handle->rowCount() > 0){
 				
                 $getRow = $handle->fetch(PDO::FETCH_ASSOC);
-                echo '<p>'.$getRow['contrasenya'].'</p>';
 
 		        if(password_verify($password, $getRow['contrasenya'])){
 					unset($getRow['contrasenya']);
 					$_SESSION['usu'] = $getRow['email'];
                     $_SESSION['id'] = $getRow['id_usuario'];
-					header('location: ..\..\..\index.html.php');
+					header('Location: ../../../index.html.php');
 					exit();
 				} else {
 					$error .= "- orreo o contraseña equivocada -";
@@ -56,7 +55,7 @@ if(isset($_POST['submit'])){
     <meta name="description" content="HTML5, CSS3">
     <meta name="author" content="Enrique Monterde">
 
-    <link rel="shortcut icon" href="..\..\image\logo.JPG">
+    <link rel="shortcut icon" href="../../image/logof.JPG">
     <link rel="stylesheet" href="login-component.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     
@@ -85,8 +84,8 @@ if(isset($_POST['submit'])){
                 </form>
                 <div class="text-center">
                 <br> 
-                <a href="..\..\..\index.html.php"><div class="button">Volver</div></a>
-                <a href="..\register-component\register-component.html.php"><div class="button">Crear una cuenta</div></a>
+                <a href="../../../index.html.php"><div class="button">Volver</div></a>
+                <a href="../register-component/register-component.html.php"><div class="button">Crear una cuenta</div></a>
             </div>
         </div>
     </div>
